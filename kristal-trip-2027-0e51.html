@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kristal — Aruba Quote | Point Me to Paradise</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kristal - Aruba Quote | Point Me to Paradise">
+<meta property="og:description" content="Your personalized travel quote is ready to view.">
+<meta property="og:image" content="https://images.pexels.com/photos/15358090/pexels-photo-15358090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://images.pexels.com/photos/15358090/pexels-photo-15358090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+
+<style>
+:root {
+  --aqua-deep:    #86afad;
+  --aqua:         #a6cbc9;
+  --aqua-light:   #c0e5e0;
+  --aqua-pale:    #e1f0ee;
+  --aqua-mist:    #daf6f5;
+
+  --paper:        #faf2e6;
+  --surface:      #efe3d4;
+  --card:         #fafafa;
+  --taupe:        #d5c6b2;
+  --brown:        #937043;
+
+  --gold:         #e4d7a6;
+  --gold-deep:    #d0bb6e;
+
+  --ink:          #23423f;
+  --ink-soft:     #6f7d78;
+  --ink-action:   #5e8e8b;
+
+  --white:        #ffffff;
+  --black:        #000000;
+  --line:         #d5c6b2;
+}
+
+* { box-sizing: border-box; }
+body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',system-ui,sans-serif; font-weight:400; line-height:1.7; font-size:16px; }
+.pmtp-container { max-width:880px; margin:0 auto; padding:48px 28px; }
+.pmtp-wordmark { font-family:'Playfair Display',serif; font-size:11px; font-weight:600; letter-spacing:0.22em; text-transform:uppercase; color:var(--ink-action); }
+.pmtp-divider  { height:1px; background:var(--aqua); margin:14px 0 28px; }
+.pmtp-band     { background:var(--aqua-pale); border-radius:10px; padding:22px 26px; margin:24px 0; }
+.pmtp-band h4  { font-family:'Playfair Display',serif; font-weight:500; font-size:17px; margin:0 0 8px; color:var(--ink); }
+.pmtp-accent   { background:var(--aqua-mist); border-radius:10px; padding:18px 22px; margin:18px 0; }
+.pmtp-tip      { font-size:14px; color:var(--ink-soft); border-left:2px solid var(--aqua); padding:4px 0 4px 14px; margin:12px 0; }
+.pmtp-subhead  { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; color:var(--ink-soft); font-size:17px; line-height:1.5; margin:0 0 18px; padding-bottom:14px; border-bottom:1px solid var(--gold); }
+.pmtp-footer   { background:var(--surface); margin-top:64px; padding:36px 28px; border-radius:12px; color:var(--ink); }
+.pmtp-footer-name  { font-family:'Playfair Display',serif; font-size:20px; font-weight:500; color:var(--ink); margin-bottom:2px; }
+.pmtp-footer-title { font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--ink-soft); font-size:15px; margin-bottom:14px; }
+.pmtp-footer-row   { font-size:14px; color:var(--ink); margin-bottom:4px; }
+.pmtp-footer-agency { margin-top:14px; font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--ink-soft); font-size:14px; }
+.pmtp-disclaimer { margin-top:28px; padding:22px 26px; background:var(--card); border:1px solid var(--line); border-radius:8px; font-size:12.5px; line-height:1.7; color:var(--ink-soft); }
+.pmtp-disclaimer-label { display:block; font-family:'DM Sans',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink); margin-bottom:8px; }
+a { color:var(--ink-action); text-decoration:none; border-bottom:1px solid var(--aqua); }
+a:hover { border-bottom-color:var(--ink-action); }
+hr { border:0; height:1px; background:var(--gold); margin:32px 0; }
+
+h1 { font: 500 42px/1.15 'Playfair Display', serif; margin:0; color:var(--ink); }
+h2 { font: 500 26px/1.3 'Playfair Display', serif; margin-top: 48px; }
+h3 { font: 500 19px/1.4 'Playfair Display', serif; margin-top: 0; }
+
+.pmtp-hero { text-align:center; padding:90px 24px 70px; border-radius:0 0 18px 18px; }
+.pmtp-hero-meta { display:flex; justify-content:center; gap:28px; flex-wrap:wrap; margin-top:26px; font-size:14px; color:var(--ink); }
+.pmtp-hero-meta span { font-weight:600; }
+.pmtp-hero-meta small { display:block; color:var(--ink-soft); font-weight:400; text-transform:uppercase; letter-spacing:0.08em; font-size:11px; margin-bottom:3px; }
+
+.trip-basics { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:32px 0; }
+.trip-basics .cell { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; text-align:center; }
+.trip-basics .cell small { display:block; text-transform:uppercase; letter-spacing:0.08em; font-size:10.5px; color:var(--ink-soft); margin-bottom:6px; }
+.trip-basics .cell strong { font-family:'Playfair Display',serif; font-size:17px; font-weight:500; color:var(--ink); }
+@media (max-width:600px){ .trip-basics{grid-template-columns:repeat(2,1fr);} }
+
+.info-box { background:var(--surface); border-radius:10px; padding:22px 26px; margin:20px 0; }
+.info-box h4 { font-family:'Playfair Display',serif; font-weight:500; font-size:16px; margin:0 0 10px; color:var(--ink); }
+.info-box p { margin:6px 0; font-size:14.5px; }
+.info-box .label { font-weight:600; color:var(--ink-action); font-size:12.5px; text-transform:uppercase; letter-spacing:0.06em; }
+
+.option-card { border: 2px solid var(--line); border-radius: 12px; padding: 26px; margin-bottom: 18px; transition: border-color 0.2s, box-shadow 0.2s; background: var(--card); }
+.option-card.selected { border-color: var(--aqua-deep); box-shadow: 0 4px 18px rgba(134,175,173,0.18); }
+.option-card .badge { display:inline-block; background:var(--aqua-pale); color:var(--ink-action); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; padding:4px 10px; border-radius:6px; margin-bottom:10px; }
+.option-price { font-family:'Playfair Display',serif; font-size:23px; font-weight:500; color:var(--ink); margin:4px 0 2px; }
+.option-price small { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:400; color:var(--ink-soft); }
+.option-specs { list-style:none; padding:0; margin:14px 0; font-size:14.5px; }
+.option-specs li { padding:5px 0 5px 20px; position:relative; }
+.option-specs li::before { content:"—"; position:absolute; left:0; color:var(--ink-action); }
+.select-btn { margin-top: 12px; padding: 10px 22px; border-radius: 8px; border: 2px solid var(--aqua-deep); background: var(--aqua-pale); color: var(--ink); font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s; font-family:'DM Sans',sans-serif; }
+.option-card.selected .select-btn { background: var(--aqua-deep); color: var(--ink); }
+.select-btn:focus-visible { outline: 3px solid var(--aqua-deep); outline-offset: 2px; }
+
+.rate-basis { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:20px 0; }
+.rate-basis .col { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px; }
+.rate-basis .col h4 { margin:0 0 10px; font-family:'Playfair Display',serif; font-size:15.5px; }
+.rate-basis ul { margin:0; padding-left:18px; font-size:14px; }
+.rate-basis li { margin-bottom:6px; }
+@media (max-width:600px){ .rate-basis{grid-template-columns:1fr;} }
+
+.sticky-bar { position:sticky; bottom:0; left:0; right:0; background:var(--aqua-pale); border-top:1px solid var(--aqua); padding:14px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; z-index:50; }
+.sticky-bar .label { font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-soft); }
+.sticky-bar .amount { font-family:'Playfair Display',serif; font-size:22px; font-weight:600; color:var(--ink); }
+.sticky-bar .note { font-size:11.5px; color:var(--ink-soft); }
+
+form { margin-top:10px; }
+.form-row { margin-bottom:18px; }
+.form-row label { display:block; font-size:13px; font-weight:600; color:var(--ink); margin-bottom:6px; }
+.form-row input, .form-row select, .form-row textarea {
+  width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:8px;
+  font-family:'DM Sans',sans-serif; font-size:16px; color:var(--ink); background:var(--card);
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline:2px solid var(--aqua-deep); outline-offset:1px; }
+.form-row textarea { min-height:100px; resize:vertical; }
+#submit-btn { background:var(--aqua-deep); color:var(--ink); border:none; border-radius:8px; padding:14px 30px; font-size:16px; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; }
+#submit-btn:focus-visible { outline:3px solid var(--ink-action); outline-offset:2px; }
+#submit-btn:disabled { opacity:0.6; cursor:not-allowed; }
+
+@media (max-width:600px) { .pmtp-container { padding:32px 18px; } h1 { font-size:30px; } h2 { font-size:22px; margin-top:36px; } .pmtp-hero{padding:64px 18px 48px;} }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+</style>
+</head>
+<body>
+
+<div class="pmtp-hero" style="background-image: linear-gradient(180deg, rgba(255,255,255,0.35), rgba(193,228,225,0.55) 38%, rgba(225,240,238,0.82) 75%, rgba(250,242,230,0.97)), url('https://images.pexels.com/photos/15358090/pexels-photo-15358090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size:cover; background-position:center;">
+  <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
+  <h1>Aruba, Girls' Trip</h1>
+  <div style="width:60px;height:1px;background:var(--gold);margin:18px auto;"></div>
+  <p style="font-size:21px;line-height:1.5;max-width:620px;margin:0 auto;color:var(--ink-action);font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;">Four nights, five of you, and a stretch of the ABC islands' driest, sunniest coastline.</p>
+  <div class="pmtp-hero-meta">
+    <div><small>Client</small><span>Kristal</span></div>
+    <div><small>Travelers</small><span>5 Adults</span></div>
+    <div><small>Dates</small><span>May 20 – 24, 2027</span></div>
+    <div><small>Trip Length</small><span>4 Nights</span></div>
+  </div>
+</div>
+
+<div class="pmtp-container">
+
+  <div class="trip-basics">
+    <div class="cell"><small>Rooms</small><strong>2</strong></div>
+    <div class="cell"><small>Trip Type</small><strong>All-Inclusive</strong></div>
+    <div class="cell"><small>Check-In</small><strong>May 20</strong></div>
+    <div class="cell"><small>Check-Out</small><strong>May 24</strong></div>
+  </div>
+
+  <div class="pmtp-band">
+    <h4>The Point Me to Paradise Difference</h4>
+    <p style="margin:0;">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
+  </div>
+
+  <h2>Where You're Headed</h2>
+  <p class="pmtp-subhead">Aruba sits south of the hurricane belt, which is part of why late May stays reliably clear — trade winds keep the heat honest, and the water off the west coast runs the pale turquoise you've seen in photos, minus the exaggeration. This is the low-key side of the Caribbean: no lush jungle, just cactus-studded desert meeting calm, current-free swimming.</p>
+  <p>Every resort on this list sits along the same stretch of coast between Palm Beach and Eagle Beach, so wherever you land, you're a short walk or a five-minute cab from the others if you want to bar-hop or check out a different pool scene one afternoon.</p>
+
+  <h2>Getting There</h2>
+  <div class="info-box">
+    <h4>Flights — one stop each way</h4>
+    <p>No nonstop service is currently running from Houston (IAH/HOU) to Aruba (AUA) for these dates, so every option connects once each direction. Your advisor will lock in the specific routing once dates are confirmed.</p>
+    <p><span class="label">Basic Economy</span> starting around $716 per person</p>
+    <p><span class="label">Main Cabin</span> starting around $836 per person</p>
+    <p style="margin-top:14px;"><span class="label">Airport Transfers</span> Roundtrip transportation for all 5 travelers runs approximately $350–$400 total, arranged separately from airfare.</p>
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:10px;">Airfare and transfers are quoted separately and are not included in the resort totals below.</p>
+  </div>
+
+  <h2>Resort Options</h2>
+  <p class="pmtp-subhead">Four all-inclusive options, each set up for 2 rooms / 5 adults. Pricing below is the total for both rooms, four nights.</p>
+
+  <div class="option-card" id="option-1" data-value="Divi Aruba All Inclusive — 2 Standard Rooms ($8,856)">
+    <span class="badge">Free cancellation through Apr 19</span>
+    <h3>Divi Aruba All Inclusive</h3>
+    <p class="option-price">$8,856 <small>total for 2 rooms, 4 nights</small></p>
+    <ul class="option-specs">
+      <li>2 Standard Rooms, 2 Queen beds each</li>
+      <li>Pool view</li>
+      <li>All-inclusive dining and beverages</li>
+    </ul>
+    <p style="font-size:14px; color:var(--ink-soft); margin:0;">The straightforward option — set back from the water with the pool as the main gathering spot, and the lowest price on the list.</p>
+    <button class="select-btn" data-label="Select this resort" aria-pressed="false" onclick="selectOption('option-1', 'Divi Aruba All Inclusive — 2 Standard Rooms ($8,856)')">Select this resort</button>
+  </div>
+
+  <div class="option-card" id="option-2" data-value="Tamarijn Aruba All Inclusive — 2 Premium Oceanfront Rooms ($8,861.88)">
+    <span class="badge">Pay later — due Apr 17 · Free cancellation through Apr 19</span>
+    <h3>Tamarijn Aruba All Inclusive</h3>
+    <p class="option-price">$8,861.88 <small>total for 2 rooms, 4 nights</small></p>
+    <ul class="option-specs">
+      <li>2 Premium Rooms, 2 Queen beds each</li>
+      <li>Oceanfront</li>
+      <li>All-inclusive dining and beverages</li>
+    </ul>
+    <p style="font-size:14px; color:var(--ink-soft); margin:0;">Same price bracket as Divi, but you're steps from the sand instead of set back from it. Payment isn't due until April 17, so it holds without tying up funds early.</p>
+    <button class="select-btn" data-label="Select this resort" aria-pressed="false" onclick="selectOption('option-2', 'Tamarijn Aruba All Inclusive — 2 Premium Oceanfront Rooms ($8,861.88)')">Select this resort</button>
+  </div>
+
+  <div class="option-card" id="option-3" data-value="Renaissance Wind Creek Aruba Resort — 2 Ocean Suites ($8,115.88)">
+    <span class="badge">Free cancellation through Apr 19</span>
+    <h3>Renaissance Wind Creek Aruba Resort</h3>
+    <p class="option-price">$8,115.88 <small>total for 2 rooms, 4 nights</small></p>
+    <ul class="option-specs">
+      <li>2 Ocean Suites, 1 King bed + sofa bed each</li>
+      <li>All-inclusive dining and beverages</li>
+      <li>Private-launch access to Renaissance Island, including Flamingo Beach</li>
+    </ul>
+    <p style="font-size:14px; color:var(--ink-soft); margin:0;">The lowest price and the most square footage — suites, not standard rooms, with a private ferry to a private island where flamingos actually walk the beach. Downtown Oranjestad location, so it's less resort-strip, more city-adjacent.</p>
+    <button class="select-btn" data-label="Select this resort" aria-pressed="false" onclick="selectOption('option-3', 'Renaissance Wind Creek Aruba Resort — 2 Ocean Suites ($8,115.88)')">Select this resort</button>
+  </div>
+
+  <div class="option-card" id="option-4" data-value="Secrets Baby Beach Aruba — 2 Preferred Club Junior Suites ($12,228.59)">
+    <span class="badge">Pay later — due May 9 · Free cancellation through May 11</span>
+    <h3>Secrets Baby Beach Aruba</h3>
+    <p class="option-price">$12,228.59 <small>total for 2 rooms, 4 nights</small></p>
+    <ul class="option-specs">
+      <li>Adults-only</li>
+      <li>2 Preferred Club Junior Suites, 2 Double beds each</li>
+      <li>Ocean view</li>
+      <li>Preferred Club benefits (dedicated lounge, upgraded amenities)</li>
+      <li>All-inclusive dining and beverages</li>
+    </ul>
+    <p style="font-size:14px; color:var(--ink-soft); margin:0;">Adults-only changes the whole feel of the resort — no kids at the pool, no kids' menu at dinner. It's also the priciest option by about $3,400–$4,100 over the others, and it sits on Aruba's southeastern tip near Baby Beach, a longer drive from the airport and from the Palm Beach strip. The latest cancellation cutoff of the four, and payment isn't due until May 9.</p>
+    <button class="select-btn" data-label="Select this resort" aria-pressed="false" onclick="selectOption('option-4', 'Secrets Baby Beach Aruba — 2 Preferred Club Junior Suites ($12,228.59)')">Select this resort</button>
+  </div>
+
+  <div class="pmtp-accent" style="font-size:14px;">
+    <strong>Still checking:</strong> Hotel Riu Palace Antillas came up as a strong fit for this group, but it's showing fully booked for both weekends around your dates. Your advisor is continuing to check availability and will follow up if anything opens.
+  </div>
+
+  <h2>What's Included</h2>
+  <div class="rate-basis">
+    <div class="col">
+      <h4>Included</h4>
+      <ul>
+        <li>All meals and snacks on-property</li>
+        <li>Alcoholic and non-alcoholic beverages</li>
+        <li>Standard resort amenities (pools, beach access, most activities)</li>
+        <li>Taxes and resort fees</li>
+      </ul>
+    </div>
+    <div class="col">
+      <h4>Not Included</h4>
+      <ul>
+        <li>Airfare ($716–$836 per person, one stop each way)</li>
+        <li>Roundtrip airport transfers (approx. $350–$400 total)</li>
+        <li>Spa treatments and premium excursions</li>
+        <li>Travel insurance (quoted separately on request)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pmtp-band">
+    <h4>Meet or Beat</h4>
+    <p style="margin:0;">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.</p>
+  </div>
+  <p style="font-size:12.5px; color:var(--ink-soft);">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+
+  <div class="pmtp-band">
+    <h4>After This Quote</h4>
+    <p style="margin:0;">What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+  </div>
+
+  <h2>Send Your Selections to Tabitha</h2>
+  <div id="form-error" style="display:none; background:#fff1f1; border:1px solid #f5c6c6; border-radius:6px; padding:14px 18px; font-size:0.875rem; color:#b91c1c; margin-bottom:16px;">
+    We weren't able to send your message. Please contact your advisor directly at the address below.
+  </div>
+
+  <form id="tripForm" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="761a63ac-595a-40d0-bd88-de28101f0f12">
+    <input type="hidden" name="redirect" value="false">
+    <input type="hidden" name="subject" value="Quote Response — Kristal | Aruba">
+    <input type="hidden" name="from_name" value="Kristal Quote — Point Me to Paradise">
+
+    <div class="form-row">
+      <label for="name">Name *</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-row">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-row">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+    <div class="form-row">
+      <label for="option_interest">Resort Interest</label>
+      <select id="option_interest" name="option_interest">
+        <option value="">Select a resort…</option>
+        <option value="Divi Aruba All Inclusive — 2 Standard Rooms ($8,856)">Divi Aruba All Inclusive ($8,856)</option>
+        <option value="Tamarijn Aruba All Inclusive — 2 Premium Oceanfront Rooms ($8,861.88)">Tamarijn Aruba All Inclusive ($8,861.88)</option>
+        <option value="Renaissance Wind Creek Aruba Resort — 2 Ocean Suites ($8,115.88)">Renaissance Wind Creek Aruba Resort ($8,115.88)</option>
+        <option value="Secrets Baby Beach Aruba — 2 Preferred Club Junior Suites ($12,228.59)">Secrets Baby Beach Aruba ($12,228.59)</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="travel_insurance">Travel Insurance</label>
+      <select id="travel_insurance" name="travel_insurance">
+        <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+        <option value="No — not interested">No — not interested</option>
+        <option value="Already have coverage">Already have coverage</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="message">Notes / Questions</label>
+      <textarea id="message" name="message" placeholder="Anything else we should know?"></textarea>
+    </div>
+
+    <button type="submit" id="submit-btn">Send to Tabitha</button>
+  </form>
+
+  <div id="thanksMsg" style="display:none; text-align:center; padding:48px 0;">
+    <h2>Thank you — we'll be in touch shortly.</h2>
+    <p style="color:var(--ink-soft);">Your advisor Tabitha Garcia will follow up within one business day.</p>
+  </div>
+
+  <div class="pmtp-footer">
+    <div class="pmtp-footer-name">Tabitha Garcia</div>
+    <div class="pmtp-footer-title">Travel Advisor</div>
+    <div class="pmtp-footer-row"><a id="pmtpEmailLink" href="#">Loading email…</a></div>
+    <div class="pmtp-footer-agency">Point Me to Paradise Travel</div>
+  </div>
+
+  <div class="pmtp-disclaimer">
+    <span class="pmtp-disclaimer-label">Important — please read</span>
+    This quote is provided for planning purposes and reflects pricing, availability, and supplier terms accurate at the time of preparation. Pricing is subject to change until the booking is confirmed and deposit received. Availability is not guaranteed and may shift at any time. Final terms — including cancellation policies, change fees, baggage allowances, and supplier conditions — are governed by the booking confirmation and individual supplier terms of sale, which supersede anything described here. Point Me to Paradise Travel is not liable for changes in price, availability, schedule, or supplier policy after this quote is issued. Travel insurance is strongly recommended; we can quote it on request. By proceeding with a booking, you acknowledge you have read and agreed to the booking confirmation and supplier terms.
+  </div>
+
+</div>
+
+<div class="sticky-bar">
+  <div>
+    <div class="label">Selected Resort Total</div>
+    <div class="amount" id="stickyAmount">Select a resort above</div>
+  </div>
+  <div class="note">+ airfare (~$716–$836 pp) &amp; transfers (~$350–$400 total) not included</div>
+</div>
+
+<script>
+(function(){
+  var local='tabitha';
+  var domain='pointmetoparadise.com';
+  var addr=local+'\u0040'+domain;
+  var el=document.getElementById('pmtpEmailLink');
+  if(el){ el.href='mailto:'+addr; el.textContent=addr; }
+})();
+
+function selectOption(cardId, value) {
+  document.querySelectorAll('.option-card').forEach(function(card) {
+    card.classList.remove('selected');
+    var btn = card.querySelector('.select-btn');
+    if (btn) { btn.textContent = btn.dataset.label || 'Select this resort'; btn.setAttribute('aria-pressed','false'); }
+  });
+  var chosen = document.getElementById(cardId);
+  if (chosen) {
+    chosen.classList.add('selected');
+    var btn = chosen.querySelector('.select-btn');
+    if (btn) { btn.textContent = '✓ Selected'; btn.setAttribute('aria-pressed','true'); }
+  }
+  var dropdown = document.getElementById('option_interest');
+  if (dropdown) dropdown.value = value;
+  updateSticky(value);
+}
+
+function updateSticky(value) {
+  var amountEl = document.getElementById('stickyAmount');
+  if (!amountEl) return;
+  var match = value.match(/\$[\d,]+\.?\d*/);
+  amountEl.textContent = match ? match[0] : value;
+}
+
+var dd = document.getElementById('option_interest');
+if (dd) {
+  dd.addEventListener('change', function() {
+    var val = this.value;
+    document.querySelectorAll('.option-card').forEach(function(card) {
+      var btn = card.querySelector('.select-btn');
+      if (card.dataset.value === val) {
+        card.classList.add('selected');
+        if (btn) { btn.textContent = '✓ Selected'; btn.setAttribute('aria-pressed','true'); }
+      } else {
+        card.classList.remove('selected');
+        if (btn) { btn.textContent = btn.dataset.label || 'Select this resort'; btn.setAttribute('aria-pressed','false'); }
+      }
+    });
+    if (val) { updateSticky(val); } else { document.getElementById('stickyAmount').textContent = 'Select a resort above'; }
+  });
+}
+
+document.getElementById('tripForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = e.target;
+  var btn = document.getElementById('submit-btn');
+  var err = document.getElementById('form-error');
+  btn.disabled = true; btn.textContent = 'Sending…'; err.style.display = 'none';
+  fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
+    .then(function(res) { return res.json(); })
+    .then(function(json) {
+      if (json.success) {
+        form.style.display = 'none';
+        document.getElementById('thanksMsg').style.display = 'block';
+        window.scrollTo({ top: document.getElementById('thanksMsg').offsetTop - 100, behavior: 'smooth' });
+      } else {
+        btn.disabled = false; btn.textContent = 'Send to Tabitha'; err.style.display = 'block';
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    })
+    .catch(function() {
+      btn.disabled = false; btn.textContent = 'Send to Tabitha'; err.style.display = 'block';
+      err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+});
+</script>
+
+</body>
+</html>
