@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kristal's Aruba Proposal — Point Me to Paradise Travel</title>
+<style>
+  :root{
+    --ocean-deep:#0b4a5e;
+    --ocean-mid:#1c7293;
+    --turquoise:#1f9e8e;
+    --coral:#ff6f5e;
+    --sand:#f8f4ee;
+    --sand-dark:#eee5d8;
+    --ink:#1c2528;
+    --ink-soft:#4a5559;
+    --line:#e0d9cd;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--sand);
+    line-height:1.55;
+  }
+  img{max-width:100%;}
+  a{color:var(--ocean-mid);}
+
+  .hero{
+    position:relative;
+    min-height:420px;
+    background-image:
+      linear-gradient(180deg, rgba(11,74,94,0.35) 0%, rgba(11,74,94,0.75) 60%, rgba(11,74,94,0.92) 100%),
+      url('https://images.pexels.com/photos/15358090/pexels-photo-15358090.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+    padding:40px 24px 32px;
+  }
+  .hero-inner{
+    max-width:960px;
+    margin:0 auto;
+    width:100%;
+    color:var(--white);
+  }
+  .brand-tag{
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:600;
+    color:#cdeee6;
+    margin-bottom:10px;
+  }
+  .hero h1{
+    font-size:clamp(28px,5vw,44px);
+    margin:0 0 10px;
+    font-weight:700;
+    line-height:1.15;
+  }
+  .hero .meta{
+    font-size:15px;
+    color:#e8f4f1;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px 18px;
+  }
+  .hero .meta span{white-space:nowrap;}
+
+  .wrap{
+    max-width:960px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  .section{
+    padding:36px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .section:last-of-type{border-bottom:none;}
+
+  h2.section-title{
+    font-size:22px;
+    margin:0 0 6px;
+    color:var(--ocean-deep);
+  }
+  .section-sub{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    margin:0 0 22px;
+  }
+
+  .commitment-box{
+    background:var(--ocean-deep);
+    color:#f2f9f7;
+    border-radius:14px;
+    padding:20px 24px;
+    font-size:15.5px;
+    line-height:1.6;
+    margin:22px 0 0;
+  }
+  .commitment-box strong{color:#8be3d1;}
+
+  .overview-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:18px;
+  }
+  .overview-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px 18px;
+  }
+  .overview-card .label{
+    font-size:11.5px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--ink-soft);
+    margin-bottom:4px;
+  }
+  .overview-card .value{
+    font-size:16px;
+    font-weight:600;
+    color:var(--ink);
+  }
+
+  .flight-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:22px 24px;
+    margin-top:16px;
+  }
+  .flight-card h3{margin:0 0 8px;font-size:17px;color:var(--ocean-deep);}
+  .flight-note{
+    background:#fff4ee;
+    border-left:3px solid var(--coral);
+    padding:12px 16px;
+    border-radius:6px;
+    font-size:14.5px;
+    margin:14px 0;
+    color:#7a3d33;
+  }
+  .fare-row{
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap;
+    margin-top:14px;
+  }
+  .fare-pill{
+    background:var(--sand-dark);
+    border-radius:10px;
+    padding:12px 18px;
+    min-width:180px;
+  }
+  .fare-pill .fare-label{font-size:12px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.5px;}
+  .fare-pill .fare-value{font-size:19px;font-weight:700;color:var(--ocean-deep);}
+  .transfer-note{
+    margin-top:16px;
+    font-size:14.5px;
+    color:var(--ink-soft);
+    border-top:1px dashed var(--line);
+    padding-top:14px;
+  }
+
+  .option-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:0;
+    margin-bottom:22px;
+    overflow:hidden;
+  }
+  .option-image{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    object-position:center 25%;
+    display:block;
+  }
+  .option-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:16px;
+    padding:22px 24px 16px;
+    flex-wrap:wrap;
+  }
+  .option-head h3{
+    margin:0 0 6px;
+    font-size:20px;
+    color:var(--ocean-deep);
+  }
+  .badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+  .badge{
+    display:inline-block;
+    background:#e6f4f1;
+    color:var(--turquoise);
+    font-size:11.5px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.4px;
+    padding:4px 10px;
+    border-radius:100px;
+  }
+  .badge.coral{background:#ffe8e4;color:#c85042;}
+  .price-block{text-align:right;min-width:150px;}
+  .price-block .per-person{font-size:12.5px;color:var(--ink-soft);}
+  .price-block .amount{font-size:24px;font-weight:800;color:var(--ocean-deep);}
+  .price-block .total-line{font-size:12.5px;color:var(--ink-soft);margin-top:2px;}
+
+  .option-body{
+    padding:0 24px 22px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px 24px;
+    font-size:14.5px;
+  }
+  .option-body .field{display:flex;gap:6px;}
+  .option-body .field .k{color:var(--ink-soft);min-width:96px;}
+  .option-policy{
+    margin:0 24px 20px;
+    padding:12px 16px;
+    background:var(--sand);
+    border-radius:8px;
+    font-size:13.5px;
+    color:var(--ink-soft);
+  }
+
+  .still-checking{
+    background:#fbf7ee;
+    border:1px dashed #d8c9a3;
+    border-radius:12px;
+    padding:16px 20px;
+    font-size:14.5px;
+    color:#6a5b34;
+    margin-top:10px;
+  }
+
+  .total-bar{
+    background:var(--ocean-deep);
+    color:var(--white);
+    border-radius:16px;
+    padding:24px;
+    margin-top:26px;
+  }
+  .total-bar .row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .total-bar .row .label{font-size:14px;color:#bfe3da;}
+  .total-bar .row .figure{font-size:26px;font-weight:800;}
+  .total-bar .sub{font-size:13px;color:#cfe9e2;margin-top:6px;}
+  .assurance{
+    margin-top:16px;
+    padding-top:16px;
+    border-top:1px solid rgba(255,255,255,0.15);
+    font-size:14.5px;
+    color:#e4f4f0;
+    line-height:1.6;
+  }
+  .fineprint{
+    font-size:12px;
+    color:#9fc9c0;
+    margin-top:10px;
+  }
+
+  .bottom-callout{
+    background:var(--turquoise);
+    color:#04241d;
+    border-radius:16px;
+    padding:24px;
+    font-size:15.5px;
+    line-height:1.6;
+    margin-bottom:28px;
+  }
+  .bottom-callout strong{color:#022e24;}
+
+  form#quoteForm{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:26px;
+  }
+  .form-row{margin-bottom:16px;}
+  .form-row label{
+    display:block;
+    font-size:13.5px;
+    font-weight:600;
+    margin-bottom:6px;
+    color:var(--ink);
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea{
+    width:100%;
+    padding:11px 12px;
+    font-size:16px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    font-family:inherit;
+    background:var(--sand);
+    color:var(--ink);
+  }
+  .form-row textarea{min-height:100px;resize:vertical;}
+  .submit-btn{
+    background:var(--coral);
+    color:var(--white);
+    border:none;
+    padding:13px 28px;
+    font-size:16px;
+    font-weight:700;
+    border-radius:100px;
+    cursor:pointer;
+  }
+  .submit-btn:hover{opacity:0.92;}
+  #formError{
+    display:none;
+    background:#ffe4e1;
+    color:#8a2a1f;
+    padding:12px 16px;
+    border-radius:8px;
+    font-size:14px;
+    margin-bottom:16px;
+  }
+  #thankYou{
+    display:none;
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:36px;
+    text-align:center;
+  }
+  #thankYou h3{color:var(--ocean-deep);margin-top:0;}
+
+  footer{
+    text-align:center;
+    padding:28px 24px 40px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+
+  @media (max-width:720px){
+    .overview-grid{grid-template-columns:1fr 1fr;}
+    .option-body{grid-template-columns:1fr;}
+    .option-head{flex-direction:column;}
+    .price-block{text-align:left;}
+  }
+  @media (max-width:480px){
+    .overview-grid{grid-template-columns:1fr;}
+    .hero{min-height:360px;padding:28px 18px 24px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="brand-tag">Point Me to Paradise Travel</div>
+    <h1>Kristal's Aruba Girls Trip</h1>
+    <div class="meta">
+      <span>May 20 – May 24, 2027</span>
+      <span>•</span>
+      <span>5 Adults / 2 Rooms</span>
+      <span>•</span>
+      <span>All-Inclusive</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="section">
+    <h2 class="section-title">The Trip, At a Glance</h2>
+    <p class="section-sub">Four all-inclusive properties on the southern coast of Aruba, sized for five and priced out below. Nothing here is finalized — this is the working proposal so you and your crew can compare and decide.</p>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="label">Dates</div>
+        <div class="value">May 20–24, 2027</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">Travelers</div>
+        <div class="value">5 Adults</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">Rooms</div>
+        <div class="value">2 Rooms</div>
+      </div>
+    </div>
+
+    <div class="commitment-box">
+      We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. <strong>The work you'd hate doing — already done.</strong>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Getting There</h2>
+    <p class="section-sub">Flight research for these travel dates, checked from both IAH and HOU.</p>
+
+    <div class="flight-card">
+      <h3>No Nonstop Availability</h3>
+      <div class="flight-note">
+        There is currently no nonstop service from Houston (IAH or HOU) to Aruba for May 20–24, 2027. Every option running for these dates includes one stop each way.
+      </div>
+      <div class="fare-row">
+        <div class="fare-pill">
+          <div class="fare-label">Basic Economy</div>
+          <div class="fare-value">~$716 / person</div>
+        </div>
+        <div class="fare-pill">
+          <div class="fare-label">Main Cabin</div>
+          <div class="fare-value">~$836 / person</div>
+        </div>
+      </div>
+      <div class="transfer-note">
+        <strong>Airport transfers:</strong> Roundtrip ground transportation for all 5 travelers runs approximately $350–$400 total, based on current supplier quotes. Flights and transfers are priced separately from the resort packages below and are not yet included in any total shown.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section-title">Resort Options</h2>
+    <p class="section-sub">All four are all-inclusive, all-in for 5 adults across 2 rooms, for the same May 20–24 window. Per-person figures below are the group total divided evenly across all five travelers.</p>
+
+    <!-- OPTION 1 -->
+    <div class="option-card">
+      <div class="option-head">
+        <div>
+          <h3>Divi Aruba All Inclusive</h3>
+          <div class="badges">
+            <span class="badge">Pool View</span>
+            <span class="badge">All-Inclusive</span>
+          </div>
+        </div>
+        <div class="price-block">
+          <div class="amount">$1,771.20</div>
+          <div class="per-person">per person</div>
+          <div class="total-line">Group total: $8,856.00</div>
+        </div>
+      </div>
+      <div class="option-body">
+        <div class="field"><span class="k">Room type:</span> 2 Standard Rooms</div>
+        <div class="field"><span class="k">Bedding:</span> 2 Queen Beds per room</div>
+        <div class="field"><span class="k">View:</span> Pool View</div>
+        <div class="field"><span class="k">Meal plan:</span> All-Inclusive</div>
+      </div>
+      <div class="option-policy">Free cancellation through April 19, 2027.</div>
+    </div>
+
+    <!-- OPTION 2 -->
+    <div class="option-card">
+      <div class="option-head">
+        <div>
+          <h3>Tamarijn Aruba All Inclusive</h3>
+          <div class="badges">
+            <span class="badge">Oceanfront</span>
+            <span class="badge">All-Inclusive</span>
+            <span class="badge coral">Pay Later</span>
+          </div>
+        </div>
+        <div class="price-block">
+          <div class="amount">$1,772.38</div>
+          <div class="per-person">per person</div>
+          <div class="total-line">Group total: $8,861.88</div>
+        </div>
+      </div>
+      <div class="option-body">
+        <div class="field"><span class="k">Room type:</span> 2 Premium Rooms</div>
+        <div class="field"><span class="k">Bedding:</span> 2 Queen Beds per room</div>
+        <div class="field"><span class="k">View:</span> Oceanfront</div>
+        <div class="field"><span class="k">Meal plan:</span> All-Inclusive</div>
+      </div>
+      <div class="option-policy">Book now, pay later — payment due April 17, 2027. Free cancellation through April 19, 2027.</div>
+    </div>
+
+    <!-- OPTION 3 -->
+    <div class="option-card">
+      <div class="option-head">
+        <div>
+          <h3>Renaissance Wind Creek Aruba Resort</h3>
+          <div class="badges">
+            <span class="badge">Private Island Access</span>
+            <span class="badge">All-Inclusive</span>
+          </div>
+        </div>
+        <div class="price-block">
+          <div class="amount">$1,623.18</div>
+          <div class="per-person">per person</div>
+          <div class="total-line">Group total: $8,115.88</div>
+        </div>
+      </div>
+      <div class="option-body">
+        <div class="field"><span class="k">Room type:</span> 2 Ocean Suites</div>
+        <div class="field"><span class="k">Bedding:</span> 1 King Bed + Sofa Bed per suite</div>
+        <div class="field"><span class="k">Meal plan:</span> All-Inclusive</div>
+        <div class="field"><span class="k">Access:</span> Renaissance Island, home of Flamingo Beach</div>
+      </div>
+      <div class="option-policy">Free cancellation through April 19, 2027. Ferry access to Renaissance Island is included for suite guests — worth building a full morning around before the crowds arrive on the public side of the island.</div>
+    </div>
+
+    <!-- OPTION 4 -->
+    <div class="option-card">
+      <div class="option-head">
+        <div>
+          <h3>Secrets Baby Beach Aruba</h3>
+          <div class="badges">
+            <span class="badge">Adults-Only</span>
+            <span class="badge">Ocean View</span>
+            <span class="badge">Preferred Club</span>
+            <span class="badge coral">Pay Later</span>
+          </div>
+        </div>
+        <div class="price-block">
+          <div class="amount">$2,445.72</div>
+          <div class="per-person">per person</div>
+          <div class="total-line">Group total: $12,228.59</div>
+        </div>
+      </div>
+      <div class="option-body">
+        <div class="field"><span class="k">Room type:</span> 2 Preferred Club Junior Suites</div>
+        <div class="field"><span class="k">Bedding:</span> 2 Double Beds per room</div>
+        <div class="field"><span class="k">View:</span> Ocean View</div>
+        <div class="field"><span class="k">Meal plan:</span> All-Inclusive + Preferred Club benefits</div>
+      </div>
+      <div class="option-policy">Book now, pay later — payment due May 9, 2027. Free cancellation through May 11, 2027. Highest per-person cost of the four, offset by Preferred Club access and an adults-only property.</div>
+    </div>
+
+    <div class="still-checking">
+      <strong>Still checking:</strong> Hotel Riu Palace Antillas was on the shortlist for this trip — it's a strong fit for the group — but availability is currently showing fully booked around both weekends checked for this window. If dates flex, it's worth a second look.
+    </div>
+
+    <div class="total-bar">
+      <div class="row">
+        <div class="label">Resort Range (5 adults, accommodations only)</div>
+        <div class="figure">$8,115.88 – $12,228.59</div>
+      </div>
+      <div class="sub">Flights (~$716–$836 per person) and airport transfers (~$350–$400 total) are estimated separately and not included in the range above.</div>
+      <div class="assurance">
+        We check every component against public rates and meet or beat them. You're not paying a premium for our convenience — you're paying for the rest of what we do.
+      </div>
+      <div class="fineprint">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+    </div>
+  </div>
+
+  <div class="section" style="border-bottom:none;">
+    <div class="bottom-callout">
+      What's coming after this quote: a destination guide built for your trip — PDF or interactive in-app, with Google Maps links to every place we send you — a trip app where everything lives, and us when something goes sideways at midnight. <strong>You travel; we handle the rest.</strong>
+    </div>
+
+    <h2 class="section-title">Tell Us Where You're Leaning</h2>
+    <p class="section-sub">Fill this out and we'll follow up to lock dates, confirm rooms, and start on flights.</p>
+
+    <div id="formError"></div>
+
+    <form id="quoteForm">
+      <input type="hidden" name="access_key" value="761a63ac-595a-40d0-bd88-de28101f0f12">
+      <input type="hidden" name="subject" value="Quote Response — Kristal | Aruba">
+      <input type="hidden" name="from_name" value="Kristal Quote — Point Me to Paradise">
+      <input type="hidden" name="redirect" value="false">
+
+      <div class="form-row">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+      <div class="form-row">
+        <label for="option_interest">Which option are you leaning toward?</label>
+        <select id="option_interest" name="option_interest">
+          <option value="">Select an option</option>
+          <option value="Divi Aruba All Inclusive">Divi Aruba All Inclusive — $1,771.20 pp</option>
+          <option value="Tamarijn Aruba All Inclusive">Tamarijn Aruba All Inclusive — $1,772.38 pp</option>
+          <option value="Renaissance Wind Creek Aruba Resort">Renaissance Wind Creek Aruba Resort — $1,623.18 pp</option>
+          <option value="Secrets Baby Beach Aruba">Secrets Baby Beach Aruba — $2,445.72 pp</option>
+          <option value="Still deciding">Still deciding / need more info</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="insurance">Travel insurance</label>
+        <select id="insurance" name="insurance">
+          <option value="Yes — I'd like a quote">Yes — I'd like a quote</option>
+          <option value="No — not interested">No — not interested</option>
+          <option value="Already have coverage">Already have coverage</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Questions, room preferences, flight timing — anything helps."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send My Response</button>
+    </form>
+
+    <div id="thankYou">
+      <h3>Got it — thank you!</h3>
+      <p>Your response is in. Tabitha will follow up shortly to lock in details.</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  Prepared by Tabitha Garcia · Point Me to Paradise Travel<br>
+  Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.
+</footer>
+
+<script>
+  const form = document.getElementById('quoteForm');
+  const errorDiv = document.getElementById('formError');
+  const thankYou = document.getElementById('thankYou');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errorDiv.style.display = 'none';
+
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.success) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+      } else {
+        errorDiv.textContent = 'Something went wrong sending your response. Please try again or email us directly.';
+        errorDiv.style.display = 'block';
+      }
+    })
+    .catch(() => {
+      errorDiv.textContent = 'Something went wrong sending your response. Please try again or email us directly.';
+      errorDiv.style.display = 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
