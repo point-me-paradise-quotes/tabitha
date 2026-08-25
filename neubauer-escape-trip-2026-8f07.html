@@ -76,7 +76,10 @@ h3 { font: 500 19px/1.4 'Playfair Display', serif; margin-top: 28px; color:var(-
 }
 .trip-basics span { white-space:nowrap; }
 
+.section-kicker { font-family:'Playfair Display',serif; font-weight:600; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink-action); margin-bottom:6px; }
+
 .resort-section { margin-top:56px; padding-top: 8px; border-top: 1px solid var(--line); }
+.flight-section { margin-top:56px; }
 .resort-kicker { font-family:'Playfair Display',serif; font-weight:600; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--ink-action); margin-bottom:6px; }
 .resort-name { font-family:'Playfair Display',serif; font-weight:500; font-size:30px; margin:0 0 4px; }
 .resort-loc { font-family:'Cormorant Garamond',serif; font-style:italic; color:var(--ink-soft); font-size:18px; margin-bottom:18px; }
@@ -113,6 +116,14 @@ h3 { font: 500 19px/1.4 'Playfair Display', serif; margin-top: 28px; color:var(-
 .select-btn { margin-top: 16px; padding: 10px 22px; border-radius: 8px; border: 2px solid var(--aqua-deep); background: var(--aqua-pale); color: var(--ink); font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
 .option-card.selected .select-btn { background: var(--aqua-deep); color: var(--ink); }
 .select-btn:focus-visible { outline: 3px solid var(--aqua-deep); outline-offset: 2px; }
+
+.flight-leg { margin: 14px 0; }
+.flight-leg-label { font-family:'DM Sans',sans-serif; font-weight:700; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-action); margin-bottom:8px; }
+.flight-seg { font-size:14.5px; margin-bottom:4px; }
+.flight-layover { font-size:13.5px; color:var(--ink-soft); padding-left:18px; margin-bottom:4px; }
+.flight-summary { font-size:14px; margin-top:14px; padding-top:14px; border-top:1px solid var(--line); }
+.flight-summary div { margin-bottom:4px; }
+.flight-note { font-size:13.5px; color:var(--ink-action); margin-top:8px; }
 
 .transfer-note { background:var(--aqua-mist); border-radius:10px; padding:18px 22px; margin:20px 0; font-size:14.5px; }
 .transfer-note strong { color:var(--ink); }
@@ -168,11 +179,81 @@ textarea { resize:vertical; min-height:90px; }
     <p style="margin:0;">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
   </div>
 
-  <p class="pmtp-subhead">Aruba sits outside the hurricane belt and averages under 20 inches of rain a year, so the odds are good the sky stays out of the way for four days. We've put together two very different southern-coast reads on your anniversary — one built entirely around quiet, the other built around a longer stretch of beach and more going on. Same trade: what you're actually paying for is the difference in atmosphere, not just the room.</p>
+  <p class="pmtp-subhead">Aruba sits outside the hurricane belt and averages under 20 inches of rain a year, so the odds are good the sky stays out of the way for four days. Below are your flight options out of Houston, followed by two very different southern-coast reads on your anniversary stay — one built entirely around quiet, the other built around a longer stretch of beach and more going on.</p>
+
+  <!-- ============ FLIGHTS ============ -->
+  <div class="flight-section" id="flight-section">
+    <div class="section-kicker">Flights</div>
+    <h2 style="margin-top:0;">Getting There</h2>
+    <p>Both routings connect through a single hub each way and land you in Aruba (AUA) with time to spare before dinner. Here's how they compare.</p>
+
+    <div class="option-card" id="flight-1" data-value="Delta — 1 Stop via Atlanta ($2,132)">
+      <h3 style="margin-top:0;">Option 1 — Delta, 1 Stop via Atlanta</h3>
+
+      <div class="flight-leg">
+        <div class="flight-leg-label">Outbound — Monday, April 12</div>
+        <div class="flight-seg">DL 2557 · Houston (HOU) 6:00 AM → Atlanta (ATL) 9:00 AM (2 hr)</div>
+        <div class="flight-layover">1 hr 15 min layover in Atlanta (ATL)</div>
+        <div class="flight-seg">DL 582 · Atlanta (ATL) 10:15 AM → Aruba (AUA) 2:10 PM (3 hr 55 min)</div>
+      </div>
+
+      <div class="flight-leg">
+        <div class="flight-leg-label">Return — Friday, April 16</div>
+        <div class="flight-seg">DL 1752 · Aruba (AUA) 1:10 PM → Atlanta (ATL) 5:35 PM (4 hr 25 min)</div>
+        <div class="flight-layover">2 hr 55 min layover in Atlanta (ATL)</div>
+        <div class="flight-seg">DL 2051 · Atlanta (ATL) 8:30 PM → Houston (HOU) 9:43 PM (2 hr 13 min)</div>
+      </div>
+
+      <div class="flight-summary">
+        <div>Delta · Economy · 1 stop each way</div>
+        <div>Carry-on, checked bag, and change policy: standard Delta economy fare rules apply — we'll confirm exact allowances when you're ready to book.</div>
+        <div class="flight-note">Note: that final return leg (DL 2051) has a track record of running 30+ minutes behind schedule — worth building in slack if you have a tight connection at home.</div>
+      </div>
+
+      <p class="option-price">$2,132 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 2 adults, round trip</span></p>
+      <button
+        class="select-btn"
+        data-label="Select this flight"
+        aria-pressed="false"
+        onclick="selectFlight('flight-1', 'Delta — 1 Stop via Atlanta ($2,132)')"
+      >Select this flight</button>
+    </div>
+
+    <div class="option-card" id="flight-2" data-value="American — 1 Stop via Miami ($1,582)">
+      <h3 style="margin-top:0;">Option 2 — American, 1 Stop via Miami</h3>
+
+      <div class="flight-leg">
+        <div class="flight-leg-label">Outbound — Monday, April 12</div>
+        <div class="flight-seg">AA 1047 · Houston (IAH) 5:35 AM → Miami (MIA) 9:09 AM (2 hr 34 min)</div>
+        <div class="flight-layover">1 hr 5 min layover in Miami (MIA)</div>
+        <div class="flight-seg">AA 1028 · Miami (MIA) 10:14 AM → Aruba (AUA) 1:15 PM (3 hr 1 min)</div>
+      </div>
+
+      <div class="flight-leg">
+        <div class="flight-leg-label">Return — Friday, April 16</div>
+        <div class="flight-seg">AA 1028 · Aruba (AUA) 2:30 PM → Miami (MIA) 5:42 PM (3 hr 12 min)</div>
+        <div class="flight-layover">1 hr 43 min layover in Miami (MIA)</div>
+        <div class="flight-seg">AA 3012 · Miami (MIA) 7:25 PM → Houston (IAH) 9:29 PM (3 hr 4 min)</div>
+      </div>
+
+      <div class="flight-summary">
+        <div>American · Economy · 1 stop each way</div>
+        <div>Carry-on, checked bag, and change policy: standard American economy fare rules apply — we'll confirm exact allowances when you're ready to book.</div>
+      </div>
+
+      <p class="option-price">$1,582 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 2 adults, round trip</span></p>
+      <button
+        class="select-btn"
+        data-label="Select this flight"
+        aria-pressed="false"
+        onclick="selectFlight('flight-2', 'American — 1 Stop via Miami ($1,582)')"
+      >Select this flight</button>
+    </div>
+  </div>
 
   <!-- ============ RESORT OPTION 1 ============ -->
   <div class="resort-section" id="resort-1-section">
-    <div class="resort-kicker">Option 1</div>
+    <div class="resort-kicker">Resort Option 1</div>
     <h2 class="resort-name" style="margin-top:0;">Secrets Baby Beach Aruba</h2>
     <p class="resort-loc">Adults-only · San Nicolas, Aruba</p>
 
@@ -238,7 +319,7 @@ textarea { resize:vertical; min-height:90px; }
 
   <!-- ============ RESORT OPTION 2 ============ -->
   <div class="resort-section" id="resort-2-section">
-    <div class="resort-kicker">Option 2</div>
+    <div class="resort-kicker">Resort Option 2</div>
     <h2 class="resort-name" style="margin-top:0;">Tamarijn Aruba All Inclusive</h2>
     <p class="resort-loc">Family-friendly, oceanfront · Oranjestad, Aruba</p>
 
@@ -343,7 +424,14 @@ textarea { resize:vertical; min-height:90px; }
     <label for="phone">Phone</label>
     <input type="tel" id="phone" name="phone">
 
-    <label for="option_interest">Which option are you leaning toward?</label>
+    <label for="flight_interest">Which flight are you leaning toward?</label>
+    <select id="flight_interest" name="flight_interest">
+      <option value="">Select a flight</option>
+      <option value="Delta — 1 Stop via Atlanta ($2,132)">Delta — 1 Stop via Atlanta ($2,132)</option>
+      <option value="American — 1 Stop via Miami ($1,582)">American — 1 Stop via Miami ($1,582)</option>
+    </select>
+
+    <label for="option_interest">Which resort are you leaning toward?</label>
     <select id="option_interest" name="option_interest">
       <option value="">Select an option</option>
       <option value="Secrets Baby Beach Aruba — Junior Suite Ocean View King ($3,926.23)">Secrets Baby Beach Aruba — Junior Suite Ocean View King ($3,926.23)</option>
@@ -380,7 +468,7 @@ textarea { resize:vertical; min-height:90px; }
 <div class="sticky-bar" id="stickyBar">
   <div>
     <div class="label">Running Total</div>
-    <div class="sub" id="stickySub">Select a resort option above</div>
+    <div class="sub" id="stickySub">Select a flight and a resort above</div>
   </div>
   <div class="amount" id="stickyAmount">—</div>
 </div>
@@ -394,9 +482,68 @@ textarea { resize:vertical; min-height:90px; }
   if(el){ el.href='mailto:'+addr; el.textContent=addr; }
 })();
 
-// ---- Option selection (two-way sync with dropdown) ----
+// ---- Running total state ----
+var selectedFlight = null;
+var selectedRoom = null;
+
+function parseAmount(value) {
+  var match = value.match(/\$([\d,]+(?:\.\d{2})?)/);
+  return match ? parseFloat(match[1].replace(/,/g, '')) : 0;
+}
+
+function updateStickyBar() {
+  var amountEl = document.getElementById('stickyAmount');
+  var subEl = document.getElementById('stickySub');
+  if (!selectedFlight && !selectedRoom) {
+    amountEl.textContent = '—';
+    subEl.textContent = 'Select a flight and a resort above';
+    return;
+  }
+  var total = (selectedFlight ? parseAmount(selectedFlight) : 0) + (selectedRoom ? parseAmount(selectedRoom) : 0);
+  amountEl.textContent = '$' + total.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  var parts = [];
+  parts.push(selectedFlight ? selectedFlight.split(' — ')[0] + ' flight' : 'Flight not yet selected');
+  parts.push(selectedRoom ? selectedRoom.split(' — ')[0] : 'Resort not yet selected');
+  subEl.textContent = parts.join(' · ');
+}
+
+// ---- Flight selection (independent card group) ----
+function selectFlight(cardId, value) {
+  document.querySelectorAll('#flight-section .option-card').forEach(function(card) {
+    card.classList.remove('selected');
+    var btn = card.querySelector('.select-btn');
+    if (btn) { btn.textContent = btn.dataset.label || 'Select this flight'; btn.setAttribute('aria-pressed','false'); }
+  });
+  var chosen = document.getElementById(cardId);
+  if (chosen) {
+    chosen.classList.add('selected');
+    var btn = chosen.querySelector('.select-btn');
+    if (btn) { btn.textContent = '✓ Selected'; btn.setAttribute('aria-pressed','true'); }
+  }
+  var dropdown = document.getElementById('flight_interest');
+  if (dropdown) dropdown.value = value;
+  selectedFlight = value;
+  updateStickyBar();
+}
+document.getElementById('flight_interest') && document.getElementById('flight_interest').addEventListener('change', function() {
+  var val = this.value;
+  document.querySelectorAll('#flight-section .option-card').forEach(function(card) {
+    var btn = card.querySelector('.select-btn');
+    if (card.dataset.value === val) {
+      card.classList.add('selected');
+      if (btn) { btn.textContent = '✓ Selected'; btn.setAttribute('aria-pressed','true'); }
+    } else {
+      card.classList.remove('selected');
+      if (btn) { btn.textContent = btn.dataset.label || 'Select this flight'; btn.setAttribute('aria-pressed','false'); }
+    }
+  });
+  selectedFlight = val || null;
+  updateStickyBar();
+});
+
+// ---- Resort/room selection (independent card group) ----
 function selectOption(cardId, value) {
-  document.querySelectorAll('.option-card').forEach(function(card) {
+  document.querySelectorAll('.resort-section .option-card').forEach(function(card) {
     card.classList.remove('selected');
     var btn = card.querySelector('.select-btn');
     if (btn) { btn.textContent = btn.dataset.label || 'Select this room'; btn.setAttribute('aria-pressed','false'); }
@@ -409,11 +556,12 @@ function selectOption(cardId, value) {
   }
   var dropdown = document.getElementById('option_interest');
   if (dropdown) dropdown.value = value;
-  updateStickyBar(value);
+  selectedRoom = value;
+  updateStickyBar();
 }
 document.getElementById('option_interest') && document.getElementById('option_interest').addEventListener('change', function() {
   var val = this.value;
-  document.querySelectorAll('.option-card').forEach(function(card) {
+  document.querySelectorAll('.resort-section .option-card').forEach(function(card) {
     var btn = card.querySelector('.select-btn');
     if (card.dataset.value === val) {
       card.classList.add('selected');
@@ -423,18 +571,9 @@ document.getElementById('option_interest') && document.getElementById('option_in
       if (btn) { btn.textContent = btn.dataset.label || 'Select this room'; btn.setAttribute('aria-pressed','false'); }
     }
   });
-  updateStickyBar(val);
+  selectedRoom = val || null;
+  updateStickyBar();
 });
-
-function updateStickyBar(value) {
-  var amountEl = document.getElementById('stickyAmount');
-  var subEl = document.getElementById('stickySub');
-  if (!value) { amountEl.textContent = '—'; subEl.textContent = 'Select a resort option above'; return; }
-  var match = value.match(/\$([\d,]+\.\d{2})/);
-  amountEl.textContent = match ? '$' + match[1] : '—';
-  var label = value.split(' — ')[0];
-  subEl.textContent = label + ' · 2 adults, 4 nights';
-}
 
 // ---- Carousels ----
 function initCarousel(id) {
