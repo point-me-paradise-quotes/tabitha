@@ -117,6 +117,9 @@ h3 { font: 500 19px/1.4 'Playfair Display', serif; margin-top: 28px; color:var(-
 .option-card.selected .select-btn { background: var(--aqua-deep); color: var(--ink); }
 .select-btn:focus-visible { outline: 3px solid var(--aqua-deep); outline-offset: 2px; }
 
+.room-options-grid { display:block; }
+.room-options-grid .option-card { }
+
 .flight-leg { margin: 14px 0; }
 .flight-leg-label { font-family:'DM Sans',sans-serif; font-weight:700; font-size:11.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-action); margin-bottom:8px; }
 .flight-seg { font-size:14.5px; margin-bottom:4px; }
@@ -163,7 +166,7 @@ textarea { resize:vertical; min-height:90px; }
   <div class="pmtp-wordmark">Point Me to Paradise Travel</div>
   <h1>The Neubauers' Escape — Anniversary in Aruba</h1>
   <div class="pmtp-hairline" style="width:60px;height:1px;background:var(--gold);margin:18px auto;"></div>
-  <p class="pmtp-tagline" style="font-size:21px;line-height:1.5;max-width:620px;margin:0 auto;color:var(--ink-action);font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;">Four nights, two of you, and a choice of coastline.</p>
+  <p class="pmtp-tagline" style="font-size:21px;line-height:1.5;max-width:620px;margin:0 auto;color:var(--ink-action);font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;">Four nights, two of you, and four different coasts to consider.</p>
   <div class="trip-basics">
     <span>2 Adults</span>
     <span>April 12–16, 2027</span>
@@ -179,7 +182,7 @@ textarea { resize:vertical; min-height:90px; }
     <p style="margin:0;">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing — already done.</p>
   </div>
 
-  <p class="pmtp-subhead">Aruba sits outside the hurricane belt and averages under 20 inches of rain a year, so the odds are good the sky stays out of the way for four days. Below are your flight options out of Houston, followed by two very different southern-coast reads on your anniversary stay — one built entirely around quiet, the other built around a longer stretch of beach and more going on.</p>
+  <p class="pmtp-subhead">Aruba sits outside the hurricane belt and averages under 20 inches of rain a year, so the odds are good the sky stays out of the way for four days. Below are your flight options out of Houston, followed by four very different reads on where to stay — an adults-only stretch of southern coast, a family-energy beach on the west side, a downtown property with its own private island, and a beachfront Riu on Palm Beach. Same trade each time: what changes is the scene outside your window and what's within walking distance.</p>
 
   <!-- ============ FLIGHTS ============ -->
   <div class="flight-section" id="flight-section">
@@ -253,7 +256,7 @@ textarea { resize:vertical; min-height:90px; }
 
   <!-- ============ RESORT OPTION 1 ============ -->
   <div class="resort-section" id="resort-1-section">
-    <div class="resort-kicker">Resort Option 1</div>
+    <div class="resort-kicker">Resort Option 1 of 4</div>
     <h2 class="resort-name" style="margin-top:0;">Secrets Baby Beach Aruba</h2>
     <p class="resort-loc">Adults-only · San Nicolas, Aruba</p>
 
@@ -303,23 +306,23 @@ textarea { resize:vertical; min-height:90px; }
     </div>
 
     <h3>Room option</h3>
-    <div class="option-card" id="option-1" data-value="Secrets Baby Beach Aruba — Junior Suite Ocean View King ($3,926.23)">
-      <h3 style="margin-top:0;">Junior Suite Ocean View King</h3>
-      <p style="margin:2px 0 12px; color:var(--ink-soft); font-size:14.5px;">1 king bed · ocean view · all-inclusive · taxes included</p>
-      <p class="option-price">$3,926.23 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 4 nights, 2 adults</span></p>
+    <div class="option-card" id="option-1" data-value="Secrets Baby Beach Aruba — Junior Suite Pool View King ($3,433.99)">
+      <h3 style="margin-top:0;">Junior Suite Pool View King</h3>
+      <p style="margin:2px 0 12px; color:var(--ink-soft); font-size:14.5px;">1 king bed · pool view · adults-only · all-inclusive · taxes included</p>
+      <p class="option-price">$3,433.99 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 4 nights, 2 adults</span></p>
       <p class="option-price-sub">Book now, pay later — full payment due April 1, 2027.</p>
       <button
         class="select-btn"
         data-label="Select this room"
         aria-pressed="false"
-        onclick="selectOption('option-1', 'Secrets Baby Beach Aruba — Junior Suite Ocean View King ($3,926.23)')"
+        onclick="selectOption('option-1', 'Secrets Baby Beach Aruba — Junior Suite Pool View King ($3,433.99)')"
       >Select this room</button>
     </div>
   </div>
 
   <!-- ============ RESORT OPTION 2 ============ -->
   <div class="resort-section" id="resort-2-section">
-    <div class="resort-kicker">Resort Option 2</div>
+    <div class="resort-kicker">Resort Option 2 of 4</div>
     <h2 class="resort-name" style="margin-top:0;">Tamarijn Aruba All Inclusive</h2>
     <p class="resort-loc">Family-friendly, oceanfront · Oranjestad, Aruba</p>
 
@@ -374,7 +377,7 @@ textarea { resize:vertical; min-height:90px; }
       <h3 style="margin-top:0;">Deluxe Room, King Bed, Oceanfront</h3>
       <p style="margin:2px 0 12px; color:var(--ink-soft); font-size:14.5px;">1 king bed · oceanfront · private patio or balcony · all-inclusive</p>
       <p class="option-price">$3,484.46 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 4 nights, 2 adults</span></p>
-      <p class="option-price-sub">A second Tamarijn room category (Premium Oceanfront) is also available — ask your advisor for current pricing.</p>
+      <p class="option-price-sub">Book now, pay later — full payment due April 1, 2027.</p>
       <button
         class="select-btn"
         data-label="Select this room"
@@ -382,10 +385,156 @@ textarea { resize:vertical; min-height:90px; }
         onclick="selectOption('option-2', 'Tamarijn Aruba — Deluxe Room, King Bed, Oceanfront ($3,484.46)')"
       >Select this room</button>
     </div>
+  </div>
 
-    <div class="transfer-note">
-      <strong>Getting around:</strong> Aruba is easy to self-navigate, so we'd lean toward a rental car for the stay rather than fixed transfers — it makes it simple to get out and see the rest of the island on your own schedule, whichever resort you land on. Happy to price both a rental car and private or shared roundtrip airport transfers once you've made a decision.
+  <!-- ============ RESORT OPTION 3 ============ -->
+  <div class="resort-section" id="resort-3-section">
+    <div class="resort-kicker">Resort Option 3 of 4</div>
+    <h2 class="resort-name" style="margin-top:0;">Renaissance Wind Creek Aruba Resort</h2>
+    <p class="resort-loc">Adults-only · Downtown Oranjestad, Aruba</p>
+
+    <p>This is the one with its own island. A water taxi from the marina puts you on the 40-acre Renaissance Island in about ten minutes, where the resident flock of pink flamingos wades along Flamingo Beach and the Spa Coves give you a quieter stretch of sand than the main property. Back on land, you're in the middle of downtown Oranjestad — walkable to shops and the cruise pier — with eleven restaurants and bars on site and a 24-hour casino if that's part of your anniversary plans. The all-inclusive package here runs on three seated meals a day rather than grazing all-inclusive buffets around the clock, which is a different rhythm than the other three properties.</p>
+
+    <ul class="highlight-list">
+      <li>Private 40-acre Renaissance Island by water taxi, with Flamingo Beach and the Spa Coves</li>
+      <li>Eleven dining and bar outlets, including L.G. Smith's Steak &amp; Chop House and Fresco</li>
+      <li>Adults-only oceanfront setting in the heart of downtown Oranjestad</li>
+      <li>Multiple pools, including an adult-exclusive outdoor pool</li>
+      <li>24-hour Wind Creek Crystal Casino on site</li>
+    </ul>
+
+    <div class="carousel-wrap" id="carousel-3">
+      <div class="carousel-track" id="track-3">
+        <img src="https://images.pexels.com/photos/584498/pexels-photo-584498.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Flamingos wading in shallow water">
+        <img src="https://images.pexels.com/photos/1181181/pexels-photo-1181181.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Two pink flamingos on a beach">
+        <img src="https://images.pexels.com/photos/261105/pexels-photo-261105.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Swimming pool near palm trees at a resort">
+        <img src="https://images.pexels.com/photos/4034153/pexels-photo-4034153.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Resort pool surrounded by palm trees at dusk">
+      </div>
+      <button class="carousel-arrow prev" aria-label="Previous photo" onclick="carouselMove('3',-1)">‹</button>
+      <button class="carousel-arrow next" aria-label="Next photo" onclick="carouselMove('3',1)">›</button>
+      <div class="carousel-count" id="count-3">1 / 4</div>
+      <div class="carousel-dots" id="dots-3"></div>
     </div>
+
+    <h3>What's included</h3>
+    <div class="rate-basis">
+      <div class="rate-col">
+        <h4>Included in your rate</h4>
+        <ul>
+          <li>Daily American breakfast, lunch, and dinner (à la carte or buffet), F&amp;B service charge included</li>
+          <li>Unlimited premium brand beverages, including frozen drinks, at Renaissance-operated outlets</li>
+          <li>Room taxes, resort fee, and levy</li>
+          <li>Non-motorized water sports at Renaissance Island</li>
+        </ul>
+      </div>
+      <div class="rate-col excluded">
+        <h4>Not included</h4>
+        <ul>
+          <li>Motorized water sports</li>
+          <li>Spa treatments — a 15% discount applies Monday through Thursday only, not complimentary</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Room options</h3>
+    <p style="font-size:14.5px; color:var(--ink-soft); margin-top:-6px;">Two buildings within the same resort complex — Renaissance Ocean Suites sits directly on the water, while the Renaissance Marina Hotel faces the marina and downtown.</p>
+
+    <div class="option-card" id="option-3a" data-value="Renaissance Wind Creek Aruba — Island Suite, Ocean Suites ($3,369.87)">
+      <h3 style="margin-top:0;">Island Suite — Renaissance Ocean Suites</h3>
+      <p style="margin:2px 0 12px; color:var(--ink-soft); font-size:14.5px;">1 king bed + sofa bed · all-inclusive · access to Renaissance Island, including Flamingo Beach · taxes included</p>
+      <p class="option-price">$3,369.87 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 4 nights, 2 adults</span></p>
+      <p class="option-price-sub">Book now, pay later — full payment due April 1, 2027.</p>
+      <button
+        class="select-btn"
+        data-label="Select this room"
+        aria-pressed="false"
+        onclick="selectOption('option-3a', 'Renaissance Wind Creek Aruba — Island Suite, Ocean Suites ($3,369.87)')"
+      >Select this room</button>
+    </div>
+
+    <div class="option-card" id="option-3b" data-value="Renaissance Wind Creek Aruba — Island Room, Marina Hotel ($3,208.62)">
+      <h3 style="margin-top:0;">Island Room — Renaissance Marina Hotel</h3>
+      <p style="margin:2px 0 12px; color:var(--ink-soft); font-size:14.5px;">Adults-only · 1 king bed or 2 double beds · all-inclusive · access to Renaissance Island, including Flamingo Beach · taxes included</p>
+      <p class="option-price">$3,208.62 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 4 nights, 2 adults</span></p>
+      <p class="option-price-sub">Book now, pay later — full payment due April 1, 2027.</p>
+      <button
+        class="select-btn"
+        data-label="Select this room"
+        aria-pressed="false"
+        onclick="selectOption('option-3b', 'Renaissance Wind Creek Aruba — Island Room, Marina Hotel ($3,208.62)')"
+      >Select this room</button>
+    </div>
+  </div>
+
+  <!-- ============ RESORT OPTION 4 ============ -->
+  <div class="resort-section" id="resort-4-section">
+    <div class="resort-kicker">Resort Option 4 of 4</div>
+    <h2 class="resort-name" style="margin-top:0;">Hotel Riu Palace Antillas</h2>
+    <p class="resort-loc">Adults-only · Palm Beach, Aruba</p>
+
+    <p>Riu Palace Antillas puts you directly on Palm Beach, the busier, resort-lined strip on the island's northwest side — a different feel than the quieter San Nicolas coast or the downtown setting of the Renaissance. Six restaurants are on site, including Krystal for fusion and Rimini for Italian, plus a gourmet room reserved for guests booked into the Elite Club tier. Drinks run 24 hours with access to the bars at sister property Riu Palace Aruba next door, and there's a nightclub on site if you want the evening to keep going after dinner.</p>
+
+    <ul class="highlight-list">
+      <li>Beachfront location directly on Palm Beach</li>
+      <li>Six on-site restaurants — Italian, fusion, steakhouse, and a themed buffet</li>
+      <li>Outdoor pool with a swim-up bar, plus RIU Party nightlife events</li>
+      <li>Adults-only Elite Club area with upgraded rooms and premium dining, for guests booked into it</li>
+      <li>Non-motorized water sports: paddleboarding, snorkeling gear, kayaking included</li>
+    </ul>
+
+    <div class="carousel-wrap" id="carousel-4">
+      <div class="carousel-track" id="track-4">
+        <img src="https://images.pexels.com/photos/17590971/pexels-photo-17590971.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Resort pool with palm trees during the day">
+        <img src="https://images.pexels.com/photos/33191057/pexels-photo-33191057.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Aerial view of resort pools and palm trees">
+        <img src="https://images.pexels.com/photos/27379639/pexels-photo-27379639.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pool surrounded by trees and lounge chairs at a resort">
+        <img src="https://images.pexels.com/photos/8484839/pexels-photo-8484839.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Swimming pool beside green palm trees">
+      </div>
+      <button class="carousel-arrow prev" aria-label="Previous photo" onclick="carouselMove('4',-1)">‹</button>
+      <button class="carousel-arrow next" aria-label="Next photo" onclick="carouselMove('4',1)">›</button>
+      <div class="carousel-count" id="count-4">1 / 4</div>
+      <div class="carousel-dots" id="dots-4"></div>
+    </div>
+
+    <h3>What's included</h3>
+    <div class="rate-basis">
+      <div class="rate-col">
+        <h4>Included in your rate</h4>
+        <ul>
+          <li>Buffet breakfast and lunch; dinner with theme nights three times a week</li>
+          <li>À la carte dining at Krystal, Rimini, Palm Beach, and Malmok</li>
+          <li>24-hour snacks and drinks, with drink service at all hotel bars</li>
+          <li>In-room safe, 24-hour room service, gym access, and guided aquagym classes</li>
+          <li>Non-motorized water sports: paddleboarding, snorkeling gear, kayaking</li>
+        </ul>
+      </div>
+      <div class="rate-col excluded">
+        <h4>Not included</h4>
+        <ul>
+          <li>Spa treatments and massages</li>
+          <li>Motorized water sports and parasailing (third-party operators)</li>
+          <li>Bicycle hire and golf (external providers)</li>
+          <li>Elite Club premium dining and area access (unless booked into Elite Club)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Room option</h3>
+    <div class="option-card" id="option-4" data-value="Hotel Riu Palace Antillas — Junior Suite Ocean View ($3,405.08)">
+      <h3 style="margin-top:0;">Junior Suite Ocean View</h3>
+      <p style="margin:2px 0 12px; color:var(--ink-soft); font-size:14.5px;">Adults-only · ocean view · all-inclusive · directly on Palm Beach · taxes included</p>
+      <p class="option-price">$3,405.08 <span style="font-size:14px; color:var(--ink-soft); font-weight:400;">total for 4 nights, 2 adults</span></p>
+      <p class="option-price-sub">Book now, pay later — full payment due April 6, 2027.</p>
+      <button
+        class="select-btn"
+        data-label="Select this room"
+        aria-pressed="false"
+        onclick="selectOption('option-4', 'Hotel Riu Palace Antillas — Junior Suite Ocean View ($3,405.08)')"
+      >Select this room</button>
+    </div>
+  </div>
+
+  <div class="transfer-note">
+    <strong>Getting around:</strong> Aruba is easy to self-navigate, so we'd lean toward a rental car for the stay rather than fixed transfers — it makes it simple to get out and see the rest of the island on your own schedule, whichever resort you land on. Happy to price both a rental car and private or shared roundtrip airport transfers once you've made a decision.
   </div>
 
   <div class="pricing-zone">
@@ -431,11 +580,14 @@ textarea { resize:vertical; min-height:90px; }
       <option value="American — 1 Stop via Miami ($1,582)">American — 1 Stop via Miami ($1,582)</option>
     </select>
 
-    <label for="option_interest">Which resort are you leaning toward?</label>
+    <label for="option_interest">Which resort and room are you leaning toward?</label>
     <select id="option_interest" name="option_interest">
       <option value="">Select an option</option>
-      <option value="Secrets Baby Beach Aruba — Junior Suite Ocean View King ($3,926.23)">Secrets Baby Beach Aruba — Junior Suite Ocean View King ($3,926.23)</option>
+      <option value="Secrets Baby Beach Aruba — Junior Suite Pool View King ($3,433.99)">Secrets Baby Beach Aruba — Junior Suite Pool View King ($3,433.99)</option>
       <option value="Tamarijn Aruba — Deluxe Room, King Bed, Oceanfront ($3,484.46)">Tamarijn Aruba — Deluxe Room, King Bed, Oceanfront ($3,484.46)</option>
+      <option value="Renaissance Wind Creek Aruba — Island Suite, Ocean Suites ($3,369.87)">Renaissance Wind Creek Aruba — Island Suite, Ocean Suites ($3,369.87)</option>
+      <option value="Renaissance Wind Creek Aruba — Island Room, Marina Hotel ($3,208.62)">Renaissance Wind Creek Aruba — Island Room, Marina Hotel ($3,208.62)</option>
+      <option value="Hotel Riu Palace Antillas — Junior Suite Ocean View ($3,405.08)">Hotel Riu Palace Antillas — Junior Suite Ocean View ($3,405.08)</option>
     </select>
 
     <label for="travel_insurance">Travel insurance</label>
@@ -541,7 +693,7 @@ document.getElementById('flight_interest') && document.getElementById('flight_in
   updateStickyBar();
 });
 
-// ---- Resort/room selection (independent card group) ----
+// ---- Resort/room selection (single-choice group across all 4 resorts) ----
 function selectOption(cardId, value) {
   document.querySelectorAll('.resort-section .option-card').forEach(function(card) {
     card.classList.remove('selected');
@@ -579,7 +731,6 @@ document.getElementById('option_interest') && document.getElementById('option_in
 function initCarousel(id) {
   var track = document.getElementById('track-' + id);
   var dotsWrap = document.getElementById('dots-' + id);
-  var countEl = document.getElementById('count-' + id);
   var imgs = track.querySelectorAll('img');
   var total = imgs.length;
   imgs.forEach(function(_, i) {
@@ -613,6 +764,8 @@ function updateCarouselUI(id, idx, total) {
 }
 initCarousel('1');
 initCarousel('2');
+initCarousel('3');
+initCarousel('4');
 
 // ---- Form submission ----
 document.getElementById('tripForm').addEventListener('submit', function(e) {
