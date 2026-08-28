@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keystone Quote - Jarika Doty</title>
+<style>
+  :root{
+    --bg:#f6f1eb;
+    --paper:#fffdf9;
+    --ink:#1d2430;
+    --muted:#5f6774;
+    --line:#ded6cb;
+    --brand:#1f4d63;
+    --brand-2:#9f6b4d;
+    --accent:#e7f0f4;
+    --accent-2:#f5ebe4;
+    --good:#153f31;
+    --shadow:0 18px 45px rgba(22,28,45,.08);
+    --radius:22px;
+    --radius-sm:14px;
+    --max:1180px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;background:linear-gradient(180deg,#f3eee8 0%,#faf7f2 100%);color:var(--ink);line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+  .hero{position:relative;min-height:72vh;display:flex;align-items:end;background-image:linear-gradient(180deg,rgba(20,26,34,.24),rgba(20,26,34,.72)),url('https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/99d79434.jpg?impolicy=resizecrop&rw=1200&ra=fit');background-size:cover;background-position:center}
+  .hero-inner{width:min(var(--max),calc(100% - 32px));margin:0 auto;padding:88px 0 54px;color:#fff}
+  .eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:700;opacity:.9;margin-bottom:16px}
+  h1{font-family:Georgia, "Times New Roman", serif;font-size:clamp(42px,6vw,72px);line-height:.95;margin:0 0 18px;max-width:900px}
+  .hero-sub{font-size:clamp(18px,2.4vw,24px);max-width:760px;color:rgba(255,255,255,.88);margin-bottom:28px}
+  .hero-meta{display:flex;gap:12px;flex-wrap:wrap}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);backdrop-filter: blur(8px);padding:10px 14px;border-radius:999px;font-size:14px}
+  main{padding:34px 0 70px}
+  .overview{margin-top:-54px;position:relative;z-index:2}
+  .card{background:var(--paper);border:1px solid rgba(160,140,120,.16);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .section{padding:30px}
+  .commitment{background:#1a2431;color:#fff;padding:18px 22px;border-radius:18px;font-size:18px;line-height:1.45;margin-bottom:18px}
+  .totals{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:stretch}
+  .pricing-box{background:linear-gradient(135deg,var(--brand),#153646);color:#fff;border-radius:20px;padding:24px}
+  .pricing-box h2,.quote-overview h2,.section-title{margin:0 0 12px;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:inherit}
+  .price-range{font-family:Georgia, "Times New Roman", serif;font-size:clamp(34px,4vw,52px);line-height:1;margin:8px 0 10px}
+  .smallprint{font-size:13px;color:rgba(255,255,255,.8)}
+  .quote-overview{padding:24px;border-radius:20px;background:var(--accent)}
+  .grid-3,.grid-2{display:grid;gap:16px}
+  .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
+  .stat-label{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin-bottom:6px}
+  .stat-value{font-size:18px;font-weight:700}
+  .flight-card{margin-top:20px;border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}
+  .flight-top{display:flex;justify-content:space-between;gap:16px;align-items:start;flex-wrap:wrap;margin-bottom:14px}
+  .price-chip{background:var(--accent-2);color:#5a2d17;padding:10px 14px;border-radius:999px;font-weight:700}
+  .section-heading{font-family:Georgia, "Times New Roman", serif;font-size:34px;line-height:1.05;margin:0 0 10px}
+  .lede{font-size:18px;color:var(--muted);max-width:850px}
+  .options-stack{display:grid;gap:22px;margin-top:26px}
+  .option-card{overflow:hidden}
+  .option-head{padding:28px 30px 20px;background:linear-gradient(180deg,#fff,#f8f4ee)}
+  .option-label{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--brand);font-weight:800;margin-bottom:8px}
+  .option-title-row{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}
+  .option-title{font-family:Georgia, "Times New Roman", serif;font-size:40px;line-height:1;margin:0}
+  .option-sub{color:var(--muted);font-size:18px;margin-top:8px;max-width:760px}
+  .option-total{min-width:220px;text-align:right}
+  .option-total .label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .option-total .value{font-family:Georgia, "Times New Roman", serif;font-size:40px;line-height:1.05}
+  .option-body{padding:0 30px 30px}
+  .compare-band{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+  .subcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+  .subcard h3{margin:0 0 10px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
+  .subcard p{margin:0;color:var(--ink)}
+  .detail-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-top:18px}
+  .room-card,.table-card,.note-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+  .room-price{font-family:Georgia, "Times New Roman", serif;font-size:34px;margin:10px 0 6px}
+  .room-name{font-size:26px;line-height:1.1;margin:0 0 8px;font-family:Georgia, "Times New Roman", serif}
+  .muted{color:var(--muted)}
+  ul{padding-left:20px;margin:12px 0 0}
+  li+li{margin-top:8px}
+  table{width:100%;border-collapse:collapse}
+  th,td{padding:14px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+  .photo-card{margin:0;border-radius:16px;overflow:hidden;aspect-ratio:4/3;background:#ddd}
+  .photo-card img{width:100%;height:100%;object-fit:cover}
+  .flight-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:14px 0}
+  .flight-leg{padding:18px;border-radius:16px;background:#f8f4ee;border:1px solid var(--line)}
+  .flight-leg strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+  .note-callout{background:#f4efe8;border-left:4px solid var(--brand-2);padding:16px 18px;border-radius:12px;margin-top:18px}
+  .cta{margin-top:28px;padding:26px;background:#1a2431;color:#fff;border-radius:20px}
+  .contact-wrap{display:grid;grid-template-columns:1fr .95fr;gap:22px;align-items:start}
+  .contact-copy{padding:8px 0}
+  .contact-copy p{font-size:18px;color:#d7dce3}
+  form{background:#fff;color:var(--ink);border-radius:20px;padding:22px;border:1px solid rgba(255,255,255,.16)}
+  .field{display:grid;gap:8px;margin-bottom:14px}
+  label{font-weight:600}
+  input,select,textarea,button{width:100%;font:inherit;font-size:16px;border-radius:12px;border:1px solid #c9c2b8;padding:14px 14px;background:#fff;color:var(--ink)}
+  textarea{min-height:140px;resize:vertical}
+  button{background:var(--brand);color:#fff;border:none;font-weight:700;cursor:pointer}
+  button:hover{background:#16394a}
+  .inline-error,.thank-you{display:none;margin-top:14px;padding:14px 16px;border-radius:12px}
+  .inline-error{background:#fdecec;color:#7a1c1c;border:1px solid #f1b9b9}
+  .thank-you{background:#e8f6ef;color:#153f31;border:1px solid #bfe5cf}
+  .deployment{margin-top:28px}
+  .deployment ol{margin:12px 0 0;padding-left:20px}
+  .footer-note{font-size:14px;color:var(--muted)}
+  @media (max-width: 980px){
+    .totals,.detail-grid,.contact-wrap{grid-template-columns:1fr}
+    .grid-3{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width: 720px){
+    .wrap,.hero-inner{width:min(var(--max),calc(100% - 20px))}
+    .section,.option-head,.option-body{padding-left:20px;padding-right:20px}
+    .grid-3,.grid-2,.compare-band,.flight-grid,.photo-grid{grid-template-columns:1fr}
+    .option-total{text-align:left}
+    .hero{min-height:64vh}
+    h1{font-size:44px}
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Point Me to Paradise Travel</div>
+      <h1>Keystone Christmas Ski Quote for Jarika Doty</h1>
+      <p class="hero-sub">Two hotel options, one flight option, and a clear side-by-side read on what actually changes the trip: beginner access, village atmosphere, room layout, and how the ski day feels once you step outside.</p>
+      <div class="hero-meta">
+        <div class="pill">5 travelers</div>
+        <div class="pill">December 19-24, 2026</div>
+        <div class="pill">Keystone, Colorado</div>
+        <div class="pill">Prepared by Amy Burkett</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="overview wrap">
+      <div class="card section">
+        <div class="commitment">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing - already done.</div>
+        <div class="totals">
+          <div class="pricing-box">
+            <h2>Estimated total range</h2>
+            <div class="price-range">$4,436 - $5,182</div>
+            <p style="margin:0 0 12px">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience - you're paying for the rest of what we do.</p>
+            <div class="smallprint">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</div>
+          </div>
+          <div class="quote-overview">
+            <h2>Trip overview</h2>
+            <div class="grid-3">
+              <div class="stat"><div class="stat-label">Client</div><div class="stat-value">Jarika Doty</div></div>
+              <div class="stat"><div class="stat-label">Travelers</div><div class="stat-value">5</div></div>
+              <div class="stat"><div class="stat-label">Trip type</div><div class="stat-value">Hotel / Resort</div></div>
+            </div>
+            <div class="grid-2" style="margin-top:16px">
+              <div class="stat"><div class="stat-label">Travel window</div><div class="stat-value">December 19-24, 2026</div></div>
+              <div class="stat"><div class="stat-label">Decision path</div><div class="stat-value">Choose 1 hotel, then 1 room category</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flight-card">
+          <div class="flight-top">
+            <div>
+              <div class="option-label">Flight option</div>
+              <h2 class="section-heading" style="font-size:30px;margin-bottom:6px">United IAH - DEN</h2>
+              <div class="muted">Flights appear first in this quote because they shape the travel window and total trip spend before the hotel decision.</div>
+            </div>
+            <div class="price-chip">$2,089 total</div>
+          </div>
+          <div class="grid-3">
+            <div class="stat"><div class="stat-label">Cabin</div><div class="stat-value">Economy</div></div>
+            <div class="stat"><div class="stat-label">Outbound</div><div class="stat-value">December 18, 2026</div></div>
+            <div class="stat"><div class="stat-label">Return</div><div class="stat-value">December 24, 2026</div></div>
+          </div>
+          <div class="flight-grid">
+            <div class="flight-leg"><strong>Outbound</strong>Saturday, December 18, 2026 - United Flight 2168 - Leave IAH at 12:50 pm - Arrive DEN at 2:25 pm</div>
+            <div class="flight-leg"><strong>Return</strong>Thursday, December 24, 2026 - United Flight 2059 - Leave DEN at 6:50 pm - Arrive IAH at 10:16 pm</div>
+          </div>
+          <div class="note-card">
+            <h3 style="margin-top:0">Why this fare is worth a look</h3>
+            <ul><li>Refundable fare: more flexibility than a basic economy holiday ticket.</li><li>Changes included: you would only pay any fare difference if plans shift.</li><li>Carry-on included: useful for keeping ski layers and essentials close on travel day.</li><li>Seat choice noted: easier to keep the group arranged the way you want.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" style="margin-top:34px">
+      <div class="section">
+        <div class="option-label">Hotel options</div>
+        <h2 class="section-heading">Two ways to do Keystone at Christmas</h2>
+        <p class="lede">Both stays keep you in Keystone, but they shape the trip differently. Hidden River Lodge makes the ski-school part easy and keeps the setting quieter. River Run Village puts you in the center of the lights, restaurants, and village movement. The right choice depends less on star rating and more on how you want the day to flow.</p>
+
+        <div class="options-stack">
+          
+            <article class="card option-card" id="option-1">
+              <div class="option-head">
+                <div class="option-label">Option 1 - Hidden River Lodge</div>
+                <div class="option-title-row">
+                  <div>
+                    <h3 class="option-title">Hidden River Lodge</h3>
+                    <div class="option-sub">Keystone, CO · December 19, 2026 - December 24, 2026</div>
+                  </div>
+                  <div class="option-total">
+                    <div class="label">Flight + selected room</div>
+                    <div class="value">$4,436</div>
+                  </div>
+                </div>
+              </div>
+              <div class="option-body">
+                <div class="compare-band">
+                  <div class="subcard">
+                    <h3>How this stay feels</h3>
+                    <p>This is the calmer side of Keystone: easier mornings, less foot traffic, and a shorter walk when ski school is the center of the trip. It trades nightlife and restaurant density for convenience on beginner terrain, which can matter more than atmosphere when five people are managing gear, lessons, and December temperatures.</p>
+                  </div>
+                  <div class="subcard">
+                    <h3>What is included</h3>
+                    <p><strong>Room basis:</strong> Room only - no meals included in the rate</p>
+                    <ul><li>Located in Keystone&#39;s Mountain House Base</li><li>Perfect for beginners because the ski school is a short walk from the lodge</li><li>Quiet area close to the Discovery learning area</li><li>0.2 miles from Magic Carpet</li></ul>
+                  </div>
+                </div>
+
+                <div class="detail-grid">
+                  <div class="room-card">
+                    <div class="option-label">Room category</div>
+                    <h4 class="room-name">Suite 2 bedroom, 2 bath</h4>
+                    <div class="room-price">$2,347 total</div>
+                    <p class="muted" style="margin-top:0">This layout is built for flexibility rather than symmetry. One bedroom is comfortably adult-oriented with the king bed, while the second leans family-style with the pyramid bunk. The sofa bed adds overflow sleeping in the common area, useful for a group of five that does not need identical sleeping arrangements.</p>
+                    <h3 style="margin:18px 0 10px">Sleeping setup</h3>
+                    <ul><li>Bedroom 1 - 1 King Bed</li><li>Bedroom 2 - pyramid bunk (double bottom, twin top)</li><li>Living area - double sofa bed</li><li>Two bathrooms</li></ul>
+                    <div class="photo-grid"><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/e3cb8570.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Hotel photo for https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/e3cb8570.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit"></figure><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/47a24947.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Hotel photo for https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/47a24947.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit"></figure><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/c95326ef.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Hotel photo for https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/c95326ef.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit"></figure><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/ad6b9a8a.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Hotel photo for https://images.trvl-media.com/lodging/132000000/131760000/131753300/131753296/ad6b9a8a.jpg?impolicy=resizecrop&amp;rw=1200&amp;ra=fit"></figure></div>
+                  </div>
+                  <div style="display:grid;gap:18px">
+                    <div class="table-card">
+                      <h3 style="margin-top:0">Why pick this option</h3>
+                      <ul><li>Best fit for a group prioritizing ski school access and a quieter base area</li><li>Less immediate restaurant and shopping energy than River Run</li><li>Simple room-only setup, so breakfasts, lunches, and dinners are separate costs</li></ul>
+                    </div>
+                    <div class="table-card">
+                      <h3 style="margin-top:0">Add-ons</h3>
+                      <table><thead><tr><th>Item</th><th>Price</th><th>Notes</th></tr></thead><tbody><tr><td>Travel protection quote</td><td>Priced separately on request</td><td>Available once you choose your hotel and room category.</td></tr><tr><td>Lift tickets planning support</td><td>Custom pricing</td><td>We can layer in the right ticket duration once the base stay is selected.</td></tr></tbody></table>
+                    </div>
+                    <div class="table-card">
+                      <h3 style="margin-top:0">Transfers</h3>
+                      <table><thead><tr><th>Item</th><th>Price</th><th>Notes</th></tr></thead><tbody><tr><td>Shared shuttle roundtrip</td><td>Quoted separately</td><td>Good value if everyone stays on the same arrival and departure timing.</td></tr><tr><td>Private SUV/van roundtrip</td><td>Quoted separately</td><td>Usually the easier choice with winter luggage and a group of five.</td></tr></tbody></table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          
+            <article class="card option-card" id="option-2">
+              <div class="option-head">
+                <div class="option-label">Option 2 - River Run Village</div>
+                <div class="option-title-row">
+                  <div>
+                    <h3 class="option-title">River Run Village</h3>
+                    <div class="option-sub">Keystone, CO · December 19, 2026 - December 24, 2026</div>
+                  </div>
+                  <div class="option-total">
+                    <div class="label">Flight + selected room</div>
+                    <div class="value">$5,182</div>
+                  </div>
+                </div>
+              </div>
+              <div class="option-body">
+                <div class="compare-band">
+                  <div class="subcard">
+                    <h3>How this stay feels</h3>
+                    <p>River Run puts you in the middle of the village energy: lights, storefronts, easy coffee stops, and a more social end to the ski day. The trade is that convenience here is about village life and gondola access, not the ultra-straightforward beginner setup of Mountain House.</p>
+                  </div>
+                  <div class="subcard">
+                    <h3>What is included</h3>
+                    <p><strong>Room basis:</strong> Room only - no meals included in the rate</p>
+                    <ul><li>Great location for shopping and restaurants</li><li>Lively Christmas atmosphere</li><li>Gondola access</li><li>Still beginner friendly, though it may require a little more navigating</li><li>Free shuttle</li></ul>
+                  </div>
+                </div>
+
+                <div class="detail-grid">
+                  <div class="room-card">
+                    <div class="option-label">Room category</div>
+                    <h4 class="room-name">Condo - 2 Bedrooms - Buffalo Lodge</h4>
+                    <div class="room-price">$3,093 total</div>
+                    <p class="muted" style="margin-top:0">This option is about being in River Run as much as the room itself. The Buffalo Lodge two-bedroom condo gives the group apartment-style breathing room, but the stronger selling point is stepping out into the village instead of retreating to a quieter base after skiing.</p>
+                    <h3 style="margin:18px 0 10px">Sleeping setup</h3>
+                    <ul><li>Buffalo Lodge</li><li>Bedroom 1 - 1 King Bed</li><li>Bedroom 2 - 1 Double Bed</li><li>Living area - 1 Double sofa bed</li><li>Two-bedroom condo layout</li></ul>
+                    <div class="photo-grid"><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/1000000/800000/794600/794547/84a5cb9f.jpg?impolicy=fcrop&w=1200&h=800" alt="Hotel photo for https://images.trvl-media.com/lodging/1000000/800000/794600/794547/84a5cb9f.jpg?impolicy=fcrop&amp;w=1200&amp;h=800"></figure><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/1000000/800000/794600/794547/0a1f7418.jpg?impolicy=fcrop&w=1200&h=800" alt="Hotel photo for https://images.trvl-media.com/lodging/1000000/800000/794600/794547/0a1f7418.jpg?impolicy=fcrop&amp;w=1200&amp;h=800"></figure><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/1000000/800000/794600/794547/c70a6b25.jpg?impolicy=fcrop&w=1200&h=800" alt="Hotel photo for https://images.trvl-media.com/lodging/1000000/800000/794600/794547/c70a6b25.jpg?impolicy=fcrop&amp;w=1200&amp;h=800"></figure><figure class="photo-card"><img src="https://images.trvl-media.com/lodging/1000000/800000/794600/794547/0d819024.jpg?impolicy=fcrop&w=1200&h=800" alt="Hotel photo for https://images.trvl-media.com/lodging/1000000/800000/794600/794547/0d819024.jpg?impolicy=fcrop&amp;w=1200&amp;h=800"></figure></div>
+                  </div>
+                  <div style="display:grid;gap:18px">
+                    <div class="table-card">
+                      <h3 style="margin-top:0">Why pick this option</h3>
+                      <ul><li>Best fit for clients who want restaurants, shops, and a more festive base area within easy reach</li><li>More atmosphere after skiing, with a livelier village feel over a quieter lodge setting</li><li>Still room only, so meals remain flexible but out of pocket</li></ul>
+                    </div>
+                    <div class="table-card">
+                      <h3 style="margin-top:0">Add-ons</h3>
+                      <table><thead><tr><th>Item</th><th>Price</th><th>Notes</th></tr></thead><tbody><tr><td>Travel protection quote</td><td>Priced separately on request</td><td>Available once you choose your hotel and room category.</td></tr><tr><td>Lift tickets planning support</td><td>Custom pricing</td><td>We can pair tickets to the ski days you want after the lodging decision is made.</td></tr></tbody></table>
+                    </div>
+                    <div class="table-card">
+                      <h3 style="margin-top:0">Transfers</h3>
+                      <table><thead><tr><th>Item</th><th>Price</th><th>Notes</th></tr></thead><tbody><tr><td>Shared shuttle roundtrip</td><td>Quoted separately</td><td>Works if the group is comfortable arriving and departing together.</td></tr><tr><td>Private SUV/van roundtrip</td><td>Quoted separately</td><td>Most comfortable option for five travelers with winter bags and groceries.</td></tr></tbody></table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="card section">
+        <div class="note-callout">The practical trade: <strong>Hidden River Lodge</strong> is the easier ski-school choice and the quieter one once the day ends. <strong>River Run Village</strong> costs more, but that difference buys a stronger village setting - restaurants, shopping, gondola energy, and more of the Christmas atmosphere right outside the door.</div>
+      </div>
+    </section>
+
+    <section class="wrap" style="margin-top:34px">
+      <div class="card section cta">
+        <div class="contact-wrap">
+          <div class="contact-copy">
+            <div class="option-label" style="color:#c5d3dd">Next step</div>
+            <h2 class="section-heading" style="color:#fff;font-size:36px">Tell us which option you want us to price forward</h2>
+            <p>What's coming after this quote: a destination guide built for your trip - PDF or interactive in-app, with Google Maps links to every place we send you - a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+            <p class="footer-note" style="color:#c5d3dd">Choose one hotel option, let us know if you want a travel insurance quote, and add any notes about room setup or flight preferences.</p>
+          </div>
+          <div id="form-container">
+            <form id="quote-form">
+              <input type="hidden" name="access_key" value="592937be-1299-4b3e-b79a-f5381093f669">
+              <input type="hidden" name="subject" value="Quote Response - Jarika Doty | Keystone, Colorado">
+              <input type="hidden" name="from_name" value="Jarika Doty Quote - Point Me to Paradise">
+              <input type="hidden" name="redirect" value="false">
+
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel">
+              </div>
+              <div class="field">
+                <label for="option_interest">Option interest</label>
+                <select id="option_interest" name="option_interest">
+                  <option value="">Select an option</option>
+                  <option value="Option 1 - Hidden River Lodge">Option 1 - Hidden River Lodge</option>
+                  <option value="Option 2 - River Run Village">Option 2 - River Run Village</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="travel_insurance">Travel insurance</label>
+                <select id="travel_insurance" name="travel_insurance">
+                  <option value="Yes - I'd like a quote">Yes - I'd like a quote</option>
+                  <option value="No - not interested">No - not interested</option>
+                  <option value="Already have coverage">Already have coverage</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us which hotel feels right, any room concerns, or anything you want adjusted."></textarea>
+              </div>
+              <button type="submit">Send response</button>
+              <div class="inline-error" id="form-error"></div>
+            </form>
+          </div>
+          <div class="thank-you" id="thank-you">
+            <strong>Thanks - your response is in.</strong>
+            <div style="margin-top:6px">We'll use your selection and notes to move the trip forward.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap deployment">
+      <div class="card section">
+        <div class="option-label">Deployment checklist</div>
+        <h2 class="section-heading" style="font-size:30px">Ready-to-publish review</h2>
+        <ol>
+          <li>Save this file as <strong>Keystone-doty-trip-2026.html</strong>.</li>
+          <li>Open it in a browser and test the hero image, room photos, and responsive layout on mobile and desktop.</li>
+          <li>Submit the contact form once to confirm the thank-you state appears and the inline error handling works if required fields are empty.</li>
+          <li>Confirm pricing, names, and flight details one last time before sending to the client, since inventory and rates can shift.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+<script>
+  const form = document.getElementById('quote-form');
+  const errorBox = document.getElementById('form-error');
+  const formContainer = document.getElementById('form-container');
+  const thankYou = document.getElementById('thank-you');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Something went wrong. Please try again.');
+      }
+
+      formContainer.style.display = 'none';
+      thankYou.style.display = 'block';
+    } catch (error) {
+      errorBox.textContent = error.message || 'Unable to send right now. Please try again.';
+      errorBox.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>
