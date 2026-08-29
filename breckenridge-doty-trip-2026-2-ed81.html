@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breckenridge Quote | Jarika Doty</title>
+  <style>
+    :root {
+      --bg: #f6f2ec;
+      --paper: #fffdf9;
+      --ink: #1f1a17;
+      --muted: #6f6258;
+      --line: #ddd2c6;
+      --accent: #7a4b2a;
+      --accent-2: #b8825e;
+      --deep: #2d241e;
+      --soft: #efe5db;
+      --success: #214d34;
+      --success-bg: #e7f4ec;
+      --error: #8a1f1f;
+      --error-bg: #fce9e9;
+      --shadow: 0 18px 40px rgba(31, 26, 23, 0.10);
+      --radius-lg: 26px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #f4efe8 0%, #fbf8f4 42%, #f6f2ec 100%);
+      line-height: 1.55;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+
+    .page {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto 72px;
+    }
+
+    .hero {
+      width: 100%;
+      min-height: 520px;
+      color: #fff;
+      background-image:
+        linear-gradient(180deg, rgba(18,18,18,0.18) 0%, rgba(18,18,18,0.52) 58%, rgba(18,18,18,0.76) 100%),
+        url('https://images.trvl-media.com/lodging/1000000/80000/73800/73756/611ee17f.jpg?impolicy=resizecrop&rw=1200&ra=fit');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: flex-end;
+      border-radius: 0 0 32px 32px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero__inner {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+      padding: 84px 0 44px;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3, h4, p { margin: 0; }
+
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(40px, 7vw, 68px);
+      line-height: 0.96;
+      max-width: 760px;
+      margin-bottom: 18px;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.28);
+    }
+
+    .hero__sub {
+      max-width: 760px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .section {
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid rgba(122, 75, 42, 0.10);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .overview {
+      padding: 28px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .pill {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .pill .label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+
+    .pill .value {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--deep);
+    }
+
+    .callout {
+      background: linear-gradient(135deg, #2f251f 0%, #4a382f 100%);
+      color: #fff;
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .totals {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .totals-copy, .totals-box {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: #fff;
+      padding: 22px;
+    }
+
+    .totals-copy p + p,
+    .summary-copy p + p,
+    .hotel-copy p + p,
+    .footer-callout p + p { margin-top: 10px; }
+
+    .totals-box .label {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .price {
+      font-size: clamp(34px, 4vw, 46px);
+      line-height: 1;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .smallprint {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+      margin-bottom: 16px;
+      padding: 0 6px;
+    }
+
+    .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--deep);
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 560px;
+    }
+
+    .flight-card {
+      padding: 26px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .flight-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .flight-title h3,
+    .hotel-header h3 {
+      font-size: 28px;
+      line-height: 1.1;
+      color: var(--deep);
+    }
+
+    .flight-title p,
+    .hotel-header p {
+      margin-top: 6px;
+      color: var(--muted);
+    }
+
+    .flight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .flight-leg, .fact-box, .room-card, .hotel-summary {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+
+    .flight-leg, .fact-box {
+      padding: 18px;
+    }
+
+    .flight-leg .kicker,
+    .fact-box .kicker,
+    .hotel-summary .kicker,
+    .room-card .kicker {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .flight-leg strong,
+    .fact-box strong,
+    .hotel-summary strong,
+    .room-card strong {
+      color: var(--deep);
+    }
+
+    .flight-leg .time {
+      font-size: 24px;
+      font-weight: 800;
+      margin: 4px 0;
+      color: var(--accent);
+    }
+
+    .flight-features {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .flight-features span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--deep);
+    }
+
+    .options {
+      display: grid;
+      gap: 26px;
+    }
+
+    .hotel-option {
+      overflow: hidden;
+    }
+
+    .option-banner {
+      background: linear-gradient(135deg, #7a4b2a 0%, #b8825e 100%);
+      color: #fff;
+      padding: 16px 24px;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .hotel-body {
+      padding: 26px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .hotel-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .hotel-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .hotel-copy {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hotel-summary {
+      padding: 20px;
+      display: grid;
+      gap: 16px;
+      position: sticky;
+      top: 20px;
+    }
+
+    .summary-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--deep);
+      border-bottom: 1px solid #eee5da;
+      padding-bottom: 10px;
+    }
+
+    .summary-row:last-child { border-bottom: 0; padding-bottom: 0; }
+
+    .amenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .amenities span {
+      padding: 10px 12px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--deep);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .gallery--three { grid-template-columns: repeat(3, 1fr); }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #e8dfd5;
+    }
+
+    .rooms {
+      display: grid;
+      gap: 16px;
+    }
+
+    .room-card {
+      overflow: hidden;
+    }
+
+    .room-inner {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 0;
+    }
+
+    .room-copy {
+      padding: 22px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .room-price {
+      background: linear-gradient(180deg, #fbf6f0 0%, #f2e6da 100%);
+      border-left: 1px solid var(--line);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .room-price .amount {
+      font-size: 36px;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .room-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .room-meta span {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      font-size: 13px;
+    }
+
+    .compare {
+      padding: 28px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
+    th, td {
+      text-align: left;
+      padding: 16px 14px;
+      border-bottom: 1px solid #eee5da;
+      vertical-align: top;
+    }
+
+    th {
+      font-size: 12px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: #fbf7f2;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .commitment, .footer-callout, .form-wrap {
+      padding: 28px;
+    }
+
+    .footer-callout {
+      background: linear-gradient(135deg, #2f251f 0%, #44342b 100%);
+      color: #fff;
+    }
+
+    .form-wrap {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 26px;
+    }
+
+    .form-copy p { color: var(--muted); }
+    .form-copy p + p { margin-top: 12px; }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--deep);
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 16px;
+      background: #fff;
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    button {
+      background: var(--deep);
+      color: #fff;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      transition: transform 0.18s ease, opacity 0.18s ease;
+    }
+
+    button:hover { transform: translateY(-1px); }
+    button:disabled { opacity: 0.65; cursor: wait; transform: none; }
+
+    .inline-error {
+      display: none;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: var(--error-bg);
+      color: var(--error);
+      border: 1px solid rgba(138,31,31,0.16);
+      font-size: 14px;
+    }
+
+    .thank-you {
+      display: none;
+      padding: 20px;
+      border-radius: 16px;
+      background: var(--success-bg);
+      color: var(--success);
+      border: 1px solid rgba(33,77,52,0.14);
+    }
+
+    .signature {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .overview-grid,
+      .flight-grid,
+      .hotel-grid,
+      .form-wrap,
+      .room-inner,
+      .totals {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+      .gallery--three { grid-template-columns: repeat(3, 1fr); }
+      .room-price { border-left: 0; border-top: 1px solid var(--line); }
+      .hotel-summary { position: static; }
+    }
+
+    @media (max-width: 640px) {
+      .page { width: min(calc(100% - 20px), var(--max)); margin-bottom: 40px; }
+      .hero { min-height: 460px; border-radius: 0 0 24px 24px; }
+      .hero__inner { width: min(calc(100% - 20px), var(--max)); padding: 72px 0 32px; }
+      .overview, .flight-card, .hotel-body, .compare, .commitment, .footer-callout, .form-wrap { padding: 20px; }
+      .section-head { padding: 0 2px; }
+      .gallery, .gallery--three { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <div class="eyebrow">Point Me to Paradise Travel</div>
+      <h1>Breckenridge Christmas ski trip</h1>
+      <p class="hero__sub">For Jarika Doty and party of 5 | December 19-24, 2026. Two very different Breckenridge stays, each with its own room style and tradeoffs, plus flights up front so the full shape of the trip is easy to weigh.</p>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section card overview">
+      <div class="overview-grid">
+        <div class="pill"><span class="label">Client</span><span class="value">Jarika Doty</span></div>
+        <div class="pill"><span class="label">Travelers</span><span class="value">5 travelers</span></div>
+        <div class="pill"><span class="label">Travel dates</span><span class="value">Dec 19-24, 2026</span></div>
+        <div class="pill"><span class="label">Trip type</span><span class="value">Hotel / Resort</span></div>
+      </div>
+
+      <div class="callout">We don't book hotels. We build trips. Custom guides, trip app, real human when something goes sideways. The work you'd hate doing - already done.</div>
+
+      <div class="totals">
+        <div class="totals-copy summary-copy">
+          <p><strong>Quote structure:</strong> choose one hotel first, then choose the room category within that hotel. This quote is built to make the differences obvious - where each property sits in Breckenridge, how the stay feels day to day, and what you are actually paying for.</p>
+          <p>Christmas week in Breckenridge is busy, walkable, and full of skiers moving between Main Street, the lifts, and dinner reservations in boots. The real decision here is whether you want the deeper resort amenity set and lower price point at Beaver Run, or the closer-to-everything Peak 9 address at The Village.</p>
+          <p><strong>Flights shown below are separate from hotel pricing.</strong> Hotel totals are listed per option and per room category.</p>
+        </div>
+        <div class="totals-box">
+          <div class="label">From</div>
+          <div class="price">$3,172</div>
+          <p><strong>Hotel total</strong> for Beaver Run Resort, Suite - 2 Bedroom/2 Bath.</p>
+          <p style="margin-top:10px; color: var(--muted);">We check every component against public rates and meet or beat them. You're not paying a premium for our convenience - you're paying for the rest of what we do.</p>
+          <p class="smallprint" style="margin-top:12px;">Pricing and availability subject to change until fully booked. Final pricing confirmed by your advisor.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Flights</h2>
+        </div>
+        <p>Flight options always sit at the top so you can see the full trip flow before comparing where to stay.</p>
+      </div>
+      <div class="card flight-card">
+        <div class="flight-top">
+          <div class="flight-title">
+            <div class="badge">Option 1</div>
+            <h3>United | IAH to DEN</h3>
+            <p>Economy cabin | refundable fare</p>
+          </div>
+          <div class="totals-box" style="max-width: 260px; width: 100%; padding: 18px;">
+            <div class="label">Flight total</div>
+            <div class="price" style="font-size: 34px;">$2,089</div>
+            <p class="smallprint">Total price for the group.</p>
+          </div>
+        </div>
+
+        <div class="flight-grid">
+          <div class="flight-leg">
+            <span class="kicker">Outbound</span>
+            <strong>Saturday, December 18, 2026</strong>
+            <div class="time">12:50 p.m. -> 2:25 p.m.</div>
+            <p>United Flight 2168</p>
+            <p style="color: var(--muted); margin-top: 8px;">An early afternoon departure that gets the group into Denver with daylight still left for the mountain transfer and a calm arrival night.</p>
+          </div>
+          <div class="flight-leg">
+            <span class="kicker">Return</span>
+            <strong>Thursday, December 24, 2026</strong>
+            <div class="time">6:50 p.m. -> 10:16 p.m.</div>
+            <p>United Flight 2059</p>
+            <p style="color: var(--muted); margin-top: 8px;">A later return gives you most of the final day in Breckenridge before heading back down to Denver.</p>
+          </div>
+          <div class="fact-box">
+            <span class="kicker">Fare notes</span>
+            <p><strong>Cabin:</strong> Economy</p>
+            <p><strong>Refundability:</strong> Refundable</p>
+            <div class="flight-features" style="margin-top: 14px;">
+              <span>Seat choice</span>
+              <span>Carry-on included</span>
+              <span>Changes included</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2>Hotel options</h2>
+        </div>
+        <p>Both stays are in Breckenridge, but they solve the trip in different ways: one leans toward resort amenities and value, the other toward a prime Peak 9 address.</p>
+      </div>
+
+      <div class="options">
+        <article class="card hotel-option" id="option-1">
+          <div class="option-banner">Option 1 | Beaver Run Resort</div>
+          <div class="hotel-body">
+            <div class="hotel-header">
+              <div>
+                <h3>Beaver Run Resort</h3>
+                <p>Breckenridge | December 19-24, 2026</p>
+              </div>
+              <div class="badge">Room only</div>
+            </div>
+
+            <div class="hotel-grid">
+              <div class="hotel-copy">
+                <div class="summary-copy">
+                  <p><strong>The feel:</strong> Beaver Run is the more full-service, family-leaning choice. There is movement here - kids drifting toward the arcade, people in robes heading to the spa, skiers peeling off layers near the hot tubs after the lifts close. If you want the stay to carry some of the entertainment load on its own, this one does that better.</p>
+                  <p><strong>Location:</strong> This is the ski-in/ski-out pick, set up for easy slope access without giving up the ability to shuttle around town. It is a practical choice for a December ski trip with 5 travelers because the logistics stay simple once everyone is bundled up and moving at different speeds.</p>
+                  <p><strong>What is included - and what is not:</strong> The rate is room only. Meals are not included in the nightly price, which matters in Breckenridge over Christmas week when breakfast, lunch on the mountain, and dinners in town add up quickly.</p>
+                </div>
+
+                <div>
+                  <span class="kicker">Amenities that matter</span>
+                  <div class="amenities">
+                    <span>Indoor/outdoor pool</span>
+                    <span>8 hot tubs</span>
+                    <span>Ski in / ski out</span>
+                    <span>Arcade and game room</span>
+                    <span>Mini golf</span>
+                    <span>Ski lessons</span>
+                    <span>Free area shuttle</span>
+                    <span>Full-service spa</span>
+                    <span>Sledding</span>
+                    <span>Snow tubing</span>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="hotel-summary">
+                <span class="kicker">At a glance</span>
+                <div class="summary-stack">
+                  <div class="summary-row"><strong>Best for</strong><span>Value + resort amenities</span></div>
+                  <div class="summary-row"><strong>Address style</strong><span>Slope-focused stay</span></div>
+                  <div class="summary-row"><strong>Meals</strong><span>Not included</span></div>
+                  <div class="summary-row"><strong>Starting room total</strong><span>$3,172</span></div>
+                </div>
+                <p style="color: var(--muted);">Honest trade: not the most polished option in town, but it gives the group space, direct ski convenience, and a far lower entry price.</p>
+              </aside>
+            </div>
+
+            <div>
+              <span class="kicker">Room photos</span>
+              <div class="gallery">
+                <img src="https://images.trvl-media.com/lodging/1000000/80000/73800/73756/84f34739.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Beaver Run Resort suite photo 1" />
+                <img src="https://images.trvl-media.com/lodging/1000000/80000/73800/73756/0fe292e7.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Beaver Run Resort suite photo 2" />
+                <img src="https://images.trvl-media.com/lodging/1000000/80000/73800/73756/35e99587.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Beaver Run Resort suite photo 3" />
+                <img src="https://images.trvl-media.com/lodging/1000000/80000/73800/73756/0197f78a.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Beaver Run Resort suite photo 4" />
+                <img src="https://images.trvl-media.com/lodging/1000000/80000/73800/73756/dc789ce7.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="Beaver Run Resort suite photo 5" />
+              </div>
+            </div>
+
+            <div class="rooms">
+              <div class="room-card">
+                <div class="room-inner">
+                  <div class="room-copy">
+                    <span class="kicker">Room category</span>
+                    <div>
+                      <strong style="font-size: 24px;">Suite - 2 Bedroom / 2 Bath</strong>
+                      <p style="margin-top: 8px; color: var(--muted);">This is the practical rooming solution in the quote: enough separation for a group of 5, two bathrooms to reduce the ski-morning bottleneck, and bed configuration that favors flexibility over flash.</p>
+                    </div>
+                    <div class="room-meta">
+                      <span>3 queen beds</span>
+                      <span>1 double sofa bed</span>
+                      <span>Good fit for a group of 5</span>
+                    </div>
+                    <p><strong>Why this room works:</strong> the extra bathroom is a real quality-of-life upgrade on a winter ski trip, and the sleeping layout is straightforward for friends or family sharing space over holiday week.</p>
+                  </div>
+                  <div class="room-price">
+                    <span class="kicker">Total</span>
+                    <div class="amount">$3,172</div>
+                    <p>Room total for the stay.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card hotel-option" id="option-2">
+          <div class="option-banner">Option 2 | The Village at Breckenridge</div>
+          <div class="hotel-body">
+            <div class="hotel-header">
+              <div>
+                <h3>The Village at Breckenridge</h3>
+                <p>Breckenridge - Base of Peak 9 | December 19-24, 2026</p>
+              </div>
+              <div class="badge">Room only</div>
+            </div>
+
+            <div class="hotel-grid">
+              <div class="hotel-copy">
+                <div class="summary-copy">
+                  <p><strong>The feel:</strong> The Village is the address-driven option. The draw here is less about a long amenity list and more about the rhythm of the trip: out the door, onto Peak 9, then back toward Main Street without much friction. For travelers who care most about being right in the middle of Breckenridge's pedestrian energy, this one has the stronger position.</p>
+                  <p><strong>Location:</strong> Base of Peak 9 and close to Main Street means the mountain and town are both within easy reach. That combination tends to matter on a Christmas trip, when some of the best parts of the day are not only skiing but also walking to dinner, browsing shops, and not coordinating constant rides.</p>
+                  <p><strong>What is included - and what is not:</strong> Like Beaver Run, this rate is room only. No meals are bundled into the price, so the premium here is really being paid for location and access, not dining inclusions.</p>
+                </div>
+
+                <div>
+                  <span class="kicker">Amenities that matter</span>
+                  <div class="amenities">
+                    <span>Base of Peak 9</span>
+                    <span>Ski in / ski out</span>
+                    <span>Walk to Main Street</span>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="hotel-summary">
+                <span class="kicker">At a glance</span>
+                <div class="summary-stack">
+                  <div class="summary-row"><strong>Best for</strong><span>Prime location</span></div>
+                  <div class="summary-row"><strong>Address style</strong><span>Peak 9 + town access</span></div>
+                  <div class="summary-row"><strong>Meals</strong><span>Not included</span></div>
+                  <div class="summary-row"><strong>Starting room total</strong><span>$9,473</span></div>
+                </div>
+                <p style="color: var(--muted);">Honest trade: the location is easier to love than the price. You choose this one because the address matters more than the value equation.</p>
+              </aside>
+            </div>
+
+            <div>
+              <span class="kicker">Room photos</span>
+              <div class="gallery gallery--three">
+                <img src="https://images.trvl-media.com/lodging/1000000/30000/25400/25335/4ff43dba.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="The Village at Breckenridge condo photo 1" />
+                <img src="https://images.trvl-media.com/lodging/1000000/30000/25400/25335/32a946ee.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="The Village at Breckenridge condo photo 2" />
+                <img src="https://images.trvl-media.com/lodging/1000000/30000/25400/25335/b85f68a2.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="The Village at Breckenridge condo photo 3" />
+              </div>
+            </div>
+
+            <div class="rooms">
+              <div class="room-card">
+                <div class="room-inner">
+                  <div class="room-copy">
+                    <span class="kicker">Room category</span>
+                    <div>
+                      <strong style="font-size: 24px;">Condo - 2 Bedroom</strong>
+                      <p style="margin-top: 8px; color: var(--muted);">This category keeps the group at the base area with a condo-style setup that suits travelers who want to be out in town as much as they are in the room. The premium is almost entirely tied to the address.</p>
+                    </div>
+                    <div class="room-meta">
+                      <span>2 queen beds</span>
+                      <span>1 double sofa bed</span>
+                      <span>Condo-style layout</span>
+                    </div>
+                    <p><strong>Why this room works:</strong> it gives the party a simple shared setup in one of the most convenient positions in Breckenridge, especially for anyone who wants easy lift access and an easier walk into the center of town.</p>
+                  </div>
+                  <div class="room-price">
+                    <span class="kicker">Total</span>
+                    <div class="amount">$9,473</div>
+                    <p>Room total for the stay.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section card compare">
+      <div class="section-head" style="margin-bottom: 18px; padding: 0;">
+        <div>
+          <h2>Quick comparison</h2>
+        </div>
+        <p>The pricing gap is large enough that the decision likely comes down to whether you value amenities and savings, or the tighter Peak 9 address.</p>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Hotel</th>
+            <th>What stands out</th>
+            <th>Total room price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Beaver Run Resort</strong><br><span style="color: var(--muted);">Breckenridge</span></td>
+            <td>Best amenity mix, easier value story, stronger for travelers who want hot tubs, spa time, and more to do on property.</td>
+            <td><strong>$3,172</strong></td>
+          </tr>
+          <tr>
+            <td><strong>The Village at Breckenridge</strong><br><span style="color: var(--muted);">Base of Peak 9</span></td>
+            <td>Best location story, stronger if the group wants to prioritize being directly at Peak 9 and close to Main Street.</td>
+            <td><strong>$9,473</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section card commitment">
+      <div class="section-head" style="padding: 0; margin-bottom: 12px;">
+        <div>
+          <h2>Recommended read on these choices</h2>
+        </div>
+      </div>
+      <div class="summary-copy">
+        <p><strong>Best value:</strong> Beaver Run Resort. For this group size, the numbers are dramatically easier, the suite setup is functional, and the amenity list gives the trip more range after skiing.</p>
+        <p><strong>Best address:</strong> The Village at Breckenridge. If the trip is less about stretching the budget and more about stepping out directly into Peak 9 and Main Street energy, this is the cleaner location play.</p>
+        <p><strong>Big-picture tradeoff:</strong> both are room-only stays, so neither option softens your food budget. The difference is whether you want to spend on where you are in town, or on the overall trip experience elsewhere.</p>
+      </div>
+    </section>
+
+    <section class="section card footer-callout">
+      <p>What's coming after this quote: a destination guide built for your trip - PDF or interactive in-app, with Google Maps links to every place we send you - a trip app where everything lives, and us when something goes sideways at midnight. You travel; we handle the rest.</p>
+    </section>
+
+    <section class="section card form-wrap" id="contact">
+      <div class="form-copy">
+        <div class="section-head" style="padding: 0; margin-bottom: 12px; display:block;">
+          <h2>Choose your option</h2>
+        </div>
+        <p>When you're ready, send the form with the hotel option you want to hold. Since this quote has 2 hotel choices, the interest selector below lets you point us to the right one immediately.</p>
+        <p>If you already know which room category you want, include it in the message box and we'll pick up from there.</p>
+        <div class="signature">
+          Built for you by <strong>Amy Burkett</strong><br />Point Me to Paradise Travel
+        </div>
+      </div>
+
+      <div>
+        <div id="form-container">
+          <form id="quote-form">
+            <input type="hidden" name="access_key" value="592937be-1299-4b3e-b79a-f5381093f669" />
+            <input type="hidden" name="subject" value="Quote Response - Jarika Doty | Breckenridge" />
+            <input type="hidden" name="from_name" value="Jarika Doty Quote - Point Me to Paradise" />
+            <input type="hidden" name="redirect" value="false" />
+
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+
+            <div class="field">
+              <label for="option_interest">Option interest</label>
+              <select id="option_interest" name="option_interest">
+                <option value="">Select an option</option>
+                <option>Option 1 - Beaver Run Resort</option>
+                <option>Option 2 - The Village at Breckenridge</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="insurance">Travel insurance</label>
+              <select id="insurance" name="travel_insurance">
+                <option value="">Select one</option>
+                <option>Yes - I'd like a quote</option>
+                <option>No - not interested</option>
+                <option>Already have coverage</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell us which hotel and room category you want, or ask any questions."></textarea>
+            </div>
+
+            <div id="form-error" class="inline-error"></div>
+            <button type="submit" id="submit-btn">Send response</button>
+          </form>
+        </div>
+
+        <div id="thank-you" class="thank-you">
+          <strong>Thanks - your response is on its way.</strong>
+          <p style="margin-top:8px;">We'll review your selection and follow up with the next step for your Breckenridge trip.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('quote-form');
+    const formContainer = document.getElementById('form-container');
+    const thankYou = document.getElementById('thank-you');
+    const errorBox = document.getElementById('form-error');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      errorBox.style.display = 'none';
+      errorBox.textContent = '';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (response.ok && result.success) {
+          formContainer.style.display = 'none';
+          thankYou.style.display = 'block';
+        } else {
+          errorBox.textContent = result.message || 'Something went wrong while sending your response. Please try again.';
+          errorBox.style.display = 'block';
+        }
+      } catch (error) {
+        errorBox.textContent = 'Something went wrong while sending your response. Please try again.';
+        errorBox.style.display = 'block';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send response';
+      }
+    });
+  </script>
+</body>
+</html>
