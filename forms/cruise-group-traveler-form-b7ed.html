@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cruise Group Traveler Form — Point Me to Paradise Travel</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cruise Group Traveler Form">
+<meta property="og:description" content="Let's find the best cruise for you. These questions tell me how you like to travel and what this trip is really for, so the options I bring back are ones you'd actually choose. Ple">
+<meta property="og:image" content="https://images.pexels.com/photos/32609062/pexels-photo-32609062.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200">
+<meta property="og:site_name" content="Point Me to Paradise Travel">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cruise Group Traveler Form">
+<meta name="twitter:description" content="Let's find the best cruise for you. These questions tell me how you like to travel and what this trip is really for, so the options I bring back are ones you'd actually choose. Ple">
+<meta name="twitter:image" content="https://images.pexels.com/photos/32609062/pexels-photo-32609062.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200">
+<script type="application/json" id="pmtp-schema">{"v":1,"formType":"Travel Preferences","description":"Cruise discovery questionnaire — first cruise or fiftieth, what the trip is for, cabin style, dining, travellers, citizenship and any promotions they qualify for.","fields":[{"type":"text","label":"First name","required":true,"id":"fmu36yuob1"},{"type":"text","label":"Last name","required":true,"id":"fmu36yuob2"},{"type":"email","label":"Email","required":true,"id":"fmu36yuob3"},{"type":"tel","label":"Phone number","required":true,"id":"fmu36yuob4"},{"type":"text","label":"Trip Name","required":true,"id":"fmu36yuob5"},{"type":"note","label":"# Let's find the best cruise for YOU!","id":"fmu36yuob6"},{"type":"radio","label":"Is this your first cruise?","options":["Yes","No","I'm a cruise PRO!"],"id":"fmu36yuob7"},{"type":"checkbox","label":"The purpose of this cruise vacation is:","options":["Making memories with family and/or friends","Romance","Just for fun!","Relax & recharge (spa)","Celebrating a special occasion"],"id":"fmu36yuob8"},{"type":"checkbox","label":"What type of cabin are you interested in?","options":["We're splurging on a suite because we deserve it!","We'd like a balcony where we can enjoy morning coffee in the fresh sea air","As long as we have a window to look out of, we're happy","An interior cabin is where we get the best sleep","Other"],"id":"fmu36yuob9"},{"type":"textarea","label":"Additional travellers — names, date of birth and email. Names need to appear exactly as they do on travel documents.","required":true,"id":"fmu36yuob10"},{"type":"radio","label":"Would you like to join us for dinner in the Main Dining Room?","options":["Yes","No"],"required":true,"id":"fmu36yuob11"},{"type":"radio","label":"If not, which seating would you prefer?","options":["Early","Late","My Time"],"id":"fmu36yuob12"},{"type":"textarea","label":"Are there any medical or dietary needs or preferences? Does anyone in your party have mobility issues I should know about?","id":"fmu36yuob13"},{"type":"radio","label":"Is everyone in your party a US citizen? If not, we need to know so we can advise you properly.","options":["Yes","No"],"required":true,"id":"fmu36yuob14"},{"type":"radio","label":"Is anyone in your party pregnant, or planning to be before the cruise? Each cruise line has its own policy, so this lets us advise you. All information is private.","options":["Yes","No"],"required":true,"id":"fmu36yuob15"},{"type":"checkbox","label":"Promotions you may qualify for (tick all that apply):","options":["Senior (55 or older)","Military","Fire / EMT / Law enforcement","Teacher"],"id":"fmu36yuob16"},{"type":"text","label":"What state do you live in?","id":"fmu36yuob17"}],"settings":{"travelers":2,"intro":"Let's find the best cruise for you. These questions tell me how you like to travel and what this trip is really for, so the options I bring back are ones you'd actually choose. Please give names and dates of birth exactly as they appear on travel documents — cruise lines will not board anyone whose booking does not match their ID.","thankYou":"Thank you! We've received your details and will be in touch soon.","headerImage":"https://images.pexels.com/photos/32609062/pexels-photo-32609062.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=627&w=1200","headerTitle":"","headerCredit":{"name":"Jose Parra","link":"https://www.pexels.com/@jose-parra-325935170","source":"Pexels"}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#f4f1e9;font-family:'DM Sans',system-ui,sans-serif;color:#1b2d3a;line-height:1.5;padding:24px 14px}
+  .card{max-width:600px;margin:0 auto;background:#fff;border:1px solid #e7ddd0;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px -30px rgba(27,45,58,.4)}
+  .banner{position:relative;width:100%;max-height:200px;overflow:hidden;line-height:0}
+  .banner img{width:100%;height:100%;max-height:200px;object-fit:cover;display:block}
+  .photocredit{position:absolute;right:8px;bottom:8px;background:rgba(20,32,42,.45);color:#fff;font-size:9px;line-height:1.3;padding:2px 8px;border-radius:9px}
+  .photocredit a{color:#fff;text-decoration:underline}
+  .hd{padding:26px 28px 20px;text-align:center;border-bottom:1px solid #eee6da}
+  .hd .logo{width:78px;height:auto;margin-bottom:12px}
+  .hd h1{font-family:'Playfair Display',serif;font-size:25px;margin:0 0 6px;color:#1b2d3a}
+  .hd p{margin:0;color:#5a7a8a;font-size:14px}
+  form{padding:24px 28px 28px}
+  .field{margin-bottom:16px}
+  label{display:block;font-size:13px;font-weight:700;color:#3a5563}
+  .req{color:#c0392b}
+  input,select,textarea{width:100%;margin-top:6px;font-size:16px;font-family:inherit;color:#1b2d3a;padding:12px 13px;border:1px solid #cfe0e0;border-radius:9px;background:#fbfdfd;min-height:48px}
+  textarea{min-height:96px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:#2e8b8b;background:#fff}
+  .cblabel{font-size:13px;font-weight:700;color:#3a5563;margin-bottom:6px}
+  .fnote{background:#f2f7f7;border-left:3px solid #2e8b8b;border-radius:0 8px 8px 0;padding:10px 14px}
+  .fnote h3{margin:0 0 4px;font-size:15px;color:#22434a}
+  .fnote p{margin:5px 0;font-size:13px;color:#3a5563;line-height:1.55}
+  .cbs{display:flex;flex-direction:column;gap:8px}
+  .cb{display:flex;align-items:center;gap:9px;font-weight:400;font-size:15px}
+  .cb input{width:auto;min-height:auto;margin:0}
+  .trav{border:1px dashed #75afb1;border-radius:12px;padding:14px 14px 4px;background:#eef8f8;margin-bottom:14px;position:relative;margin-top:10px}
+  .trav-tag{position:absolute;top:-11px;left:14px;background:#2e8b8b;color:#fff;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 10px;border-radius:11px}
+  .ppscan{margin:4px 0 14px;padding-top:10px;border-top:1px solid #cfe4e4}
+  .ppbtn{display:inline-block;cursor:pointer;background:#2e8b8b;color:#fff;font-size:13.5px;font-weight:600;padding:9px 15px;border-radius:9px;line-height:1.3}
+  .ppbtn:hover{background:#256f6f}
+  .ppnote{font-size:11.5px;color:#5c6b70;margin-top:7px;line-height:1.45}
+  .ppmsg{font-size:12.5px;margin-top:7px;line-height:1.45}
+  .ppmsg.good{color:#2e8b8b}
+  .ppmsg.bad{color:#b45309}
+  .trav label{font-size:12px;color:#4a6675}
+  .addTrav{margin-top:2px;background:#eef8f8;border:1px dashed #2e8b8b;color:#2e8b8b;border-radius:9px;padding:11px 14px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer;min-height:48px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:440px){.grid2{grid-template-columns:1fr}}
+  .intro{background:#eef8f8;border-left:3px solid #2e8b8b;border-radius:0 8px 8px 0;padding:12px 15px;font-size:14px;color:#2c4a52;margin-bottom:20px}
+  button[type=submit]{width:100%;margin-top:8px;background:#2e8b8b;color:#fff;border:none;border-radius:10px;padding:15px;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer;min-height:52px}
+  button[type=submit]:disabled{opacity:.6;cursor:default}
+  .err{display:none;margin-top:14px;background:#fdecea;border:1px solid #e6b7b1;color:#8a2b20;border-radius:9px;padding:12px 14px;font-size:14px}
+  .thanks{display:none;padding:44px 30px;text-align:center}
+  .thanks h2{font-family:'Playfair Display',serif;color:#2e8b8b;font-size:26px;margin:0 0 10px}
+  .thanks p{color:#5a7a8a;font-size:15px;margin:0}
+  .foot{text-align:center;padding:16px;font-size:11px;color:#9ab0bb;letter-spacing:.06em}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="banner"><img src="https://images.pexels.com/photos/32609062/pexels-photo-32609062.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;h=627&amp;w=1200" alt=""><div class="photocredit">Photo by <a href="https://www.pexels.com/@jose-parra-325935170" target="_blank" rel="noopener nofollow">Jose Parra</a> on <a href="https://www.pexels.com" target="_blank" rel="noopener nofollow">Pexels</a></div></div>
+    <div class="hd">
+      <img class="logo" src="https://pmtp.eliteparadiseplanners.com/pmtp-logo.png" alt="Point Me to Paradise Travel">
+      <h1>Cruise Group Traveler Form</h1>
+      <p>Point Me to Paradise Travel</p>
+    </div>
+    <form id="pmtpForm">
+      <input type="hidden" name="agent_name" value="Tabitha Garcia">
+      <input type="hidden" name="form_name" value="Cruise Group Traveler Form">
+    <input type="hidden" name="form_id" value="4a88469f-eb87-496c-8fc9-a0b15e748cd8">
+      <div class="intro">Let's find the best cruise for you. These questions tell me how you like to travel and what this trip is really for, so the options I bring back are ones you'd actually choose. Please give names and dates of birth exactly as they appear on travel documents — cruise lines will not board anyone whose booking does not match their ID.</div>
+      <div class="field"><label>First name <span class="req">*</span><input type="text" name="First name" required></label></div>
+<div class="field"><label>Last name <span class="req">*</span><input type="text" name="Last name" required></label></div>
+<div class="field"><label>Email <span class="req">*</span><input type="email" name="Email" required></label></div>
+<div class="field"><label>Phone number <span class="req">*</span><input type="tel" name="Phone number" required></label></div>
+<div class="field"><label>Trip Name <span class="req">*</span><input type="text" name="Trip Name" required></label></div>
+<div class="field fnote"><h3>Let's find the best cruise for YOU!</h3></div>
+<div class="field"><div class="cblabel">Is this your first cruise?</div><div class="cbs"><label class="cb"><input type="radio" name="Is this your first cruise?" value="Yes"> Yes</label><label class="cb"><input type="radio" name="Is this your first cruise?" value="No"> No</label><label class="cb"><input type="radio" name="Is this your first cruise?" value="I'm a cruise PRO!"> I'm a cruise PRO!</label></div></div>
+<div class="field"><div class="cblabel">The purpose of this cruise vacation is:</div><div class="cbs"><label class="cb"><input type="checkbox" name="The purpose of this cruise vacation is: — Making memories with family and/or friends" value="Yes"> Making memories with family and/or friends</label><label class="cb"><input type="checkbox" name="The purpose of this cruise vacation is: — Romance" value="Yes"> Romance</label><label class="cb"><input type="checkbox" name="The purpose of this cruise vacation is: — Just for fun!" value="Yes"> Just for fun!</label><label class="cb"><input type="checkbox" name="The purpose of this cruise vacation is: — Relax &amp; recharge (spa)" value="Yes"> Relax &amp; recharge (spa)</label><label class="cb"><input type="checkbox" name="The purpose of this cruise vacation is: — Celebrating a special occasion" value="Yes"> Celebrating a special occasion</label></div></div>
+<div class="field"><div class="cblabel">What type of cabin are you interested in?</div><div class="cbs"><label class="cb"><input type="checkbox" name="What type of cabin are you interested in? — We're splurging on a suite because we deserve it!" value="Yes"> We're splurging on a suite because we deserve it!</label><label class="cb"><input type="checkbox" name="What type of cabin are you interested in? — We'd like a balcony where we can enjoy morning coffee in the fresh sea air" value="Yes"> We'd like a balcony where we can enjoy morning coffee in the fresh sea air</label><label class="cb"><input type="checkbox" name="What type of cabin are you interested in? — As long as we have a window to look out of, we're happy" value="Yes"> As long as we have a window to look out of, we're happy</label><label class="cb"><input type="checkbox" name="What type of cabin are you interested in? — An interior cabin is where we get the best sleep" value="Yes"> An interior cabin is where we get the best sleep</label><label class="cb"><input type="checkbox" name="What type of cabin are you interested in? — Other" value="Yes"> Other</label></div></div>
+<div class="field"><label>Additional travellers — names, date of birth and email. Names need to appear exactly as they do on travel documents. <span class="req">*</span><textarea name="Additional travellers — names, date of birth and email. Names need to appear exactly as they do on travel documents." rows="4" required></textarea></label></div>
+<div class="field"><div class="cblabel">Would you like to join us for dinner in the Main Dining Room? <span class="req">*</span></div><div class="cbs"><label class="cb"><input type="radio" name="Would you like to join us for dinner in the Main Dining Room?" value="Yes" required> Yes</label><label class="cb"><input type="radio" name="Would you like to join us for dinner in the Main Dining Room?" value="No" required> No</label></div></div>
+<div class="field"><div class="cblabel">If not, which seating would you prefer?</div><div class="cbs"><label class="cb"><input type="radio" name="If not, which seating would you prefer?" value="Early"> Early</label><label class="cb"><input type="radio" name="If not, which seating would you prefer?" value="Late"> Late</label><label class="cb"><input type="radio" name="If not, which seating would you prefer?" value="My Time"> My Time</label></div></div>
+<div class="field"><label>Are there any medical or dietary needs or preferences? Does anyone in your party have mobility issues I should know about?<textarea name="Are there any medical or dietary needs or preferences? Does anyone in your party have mobility issues I should know about?" rows="4"></textarea></label></div>
+<div class="field"><div class="cblabel">Is everyone in your party a US citizen? If not, we need to know so we can advise you properly. <span class="req">*</span></div><div class="cbs"><label class="cb"><input type="radio" name="Is everyone in your party a US citizen? If not, we need to know so we can advise you properly." value="Yes" required> Yes</label><label class="cb"><input type="radio" name="Is everyone in your party a US citizen? If not, we need to know so we can advise you properly." value="No" required> No</label></div></div>
+<div class="field"><div class="cblabel">Is anyone in your party pregnant, or planning to be before the cruise? Each cruise line has its own policy, so this lets us advise you. All information is private. <span class="req">*</span></div><div class="cbs"><label class="cb"><input type="radio" name="Is anyone in your party pregnant, or planning to be before the cruise? Each cruise line has its own policy, so this lets us advise you. All information is private." value="Yes" required> Yes</label><label class="cb"><input type="radio" name="Is anyone in your party pregnant, or planning to be before the cruise? Each cruise line has its own policy, so this lets us advise you. All information is private." value="No" required> No</label></div></div>
+<div class="field"><div class="cblabel">Promotions you may qualify for (tick all that apply):</div><div class="cbs"><label class="cb"><input type="checkbox" name="Promotions you may qualify for (tick all that apply): — Senior (55 or older)" value="Yes"> Senior (55 or older)</label><label class="cb"><input type="checkbox" name="Promotions you may qualify for (tick all that apply): — Military" value="Yes"> Military</label><label class="cb"><input type="checkbox" name="Promotions you may qualify for (tick all that apply): — Fire / EMT / Law enforcement" value="Yes"> Fire / EMT / Law enforcement</label><label class="cb"><input type="checkbox" name="Promotions you may qualify for (tick all that apply): — Teacher" value="Yes"> Teacher</label></div></div>
+<div class="field"><label>What state do you live in?<input type="text" name="What state do you live in?"></label></div>
+      <button type="submit">Submit</button>
+      <div class="err" id="pmtpErr">Something went wrong sending your form. Please email us directly and we'll take care of it.</div>
+    </form>
+    <div class="thanks" id="pmtpThanks">
+      <h2>Thank you!</h2>
+      <p>Thank you! We've received your details and will be in touch soon.</p>
+    </div>
+  </div>
+  <div class="foot">POINT ME TO PARADISE TRAVEL</div>
+<script>
+  (function(){
+    // "Send to client" links carry ?client=<id> — attach it as a hidden field
+    // so the submission links to that exact client (100% match, no email guess).
+    try {
+      var _p = new URLSearchParams(window.location.search);
+      var _cid = _p.get('client') || _p.get('c');
+      if (_cid) {
+        var _f = document.getElementById('pmtpForm');
+        var _h = document.createElement('input');
+        _h.type = 'hidden'; _h.name = 'client_id'; _h.value = _cid;
+        _f.appendChild(_h);
+      }
+    } catch (e) {}
+
+    // Traveler blocks: render the starting count, and let clients add more.
+    function travBlock(i){
+      var d=document.createElement('div'); d.className='trav';
+      var rel='<option value="">Relationship to main contact…</option><option>Spouse</option><option>Partner</option><option>Domestic Partner</option><option>Child</option><option>Parent</option><option>Sibling</option><option>Relative</option><option>Friend</option><option>Other</option>';
+      d.innerHTML='<div class="trav-tag">Traveler '+i+'</div>'+
+        '<div class="grid2"><label>Full name (as on passport)<input type="text" name="Traveler '+i+' Name"></label>'+
+        '<label>Middle name<input type="text" name="Traveler '+i+' Middle name"></label></div>'+
+        '<div class="grid2"><label>Date of birth<input type="date" name="Traveler '+i+' DOB"></label>'+
+        '<label>Passport #<input type="text" name="Traveler '+i+' Passport #"></label></div>'+
+        '<div class="grid2"><label>Issue date<input type="date" name="Traveler '+i+' Passport Issue"></label>'+
+        '<label>Expiration<input type="date" name="Traveler '+i+' Passport Exp"></label></div>'+
+        '<div class="grid2"><label>Country of issue<input type="text" name="Traveler '+i+' Passport Country"></label>'+
+        '<label>Gender (as on passport)<select name="Traveler '+i+' Gender"><option value="">Select…</option><option>F</option><option>M</option><option>X</option></select></label></div>'+
+        '<label>Relationship to main contact<select name="Traveler '+i+' Relationship">'+rel+'</select></label>'+
+        // Typing a passport number off a document is the most tedious and most
+        // error-prone thing we ask a client to do. A photo fills the boxes; they
+        // still check and submit them.
+        '<div class="ppscan">'+
+          '<label class="ppbtn"><span class="ppbtn-t">📷 Photograph your passport instead</span>'+
+            '<input type="file" accept="image/*" capture="environment" style="display:none">'+
+          '</label>'+
+          '<div class="ppnote">The photo is read and then discarded — it is never saved or sent on. Check every line before you submit.</div>'+
+          '<div class="ppmsg"></div>'+
+        '</div>';
+      wireScan(d, i);
+      return d;
+    }
+
+    // Read a passport photo into this traveler's boxes.
+    function wireScan(d, i){
+      var box=d.querySelector('.ppscan'); if(!box) return;
+      var input=box.querySelector('input[type=file]');
+      var msg=box.querySelector('.ppmsg');
+      var btn=box.querySelector('.ppbtn');
+      // The text lives in its own span. Writing textContent on the LABEL would
+      // wipe its children — and the file input is one of them, so the button
+      // worked exactly once and then did nothing.
+      var btnT=box.querySelector('.ppbtn-t');
+      function say(t,cls){ msg.textContent=t||''; msg.className='ppmsg'+(cls?' '+cls:''); }
+      input.addEventListener('change',function(){
+        var file=input.files && input.files[0]; if(!file) return;
+        if(file.size > 5*1024*1024){ say('That photo is over 5MB — please take it with your phone camera rather than scanning it.','bad'); input.value=''; return; }
+        var label=btnT.textContent; btnT.textContent='Reading…'; btn.style.pointerEvents='none'; say('');
+        var fr=new FileReader();
+        fr.onload=function(){
+          fetch('https://pmtp.eliteparadiseplanners.com/api/passport-scan',{
+            method:'POST', headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({ image:String(fr.result) })
+          }).then(function(r){ return r.json().then(function(j){ return {ok:r.ok,j:j} }) })
+          .then(function(o){
+            btnT.textContent=label; btn.style.pointerEvents='';
+            input.value='';                       // never hand the file to the form
+            if(!o.ok){ say((o.j && o.j.error) || 'Could not read that photo. Please type the details in by hand.','bad'); return; }
+            var f=o.j.fields||{}, n=0;
+            function put(sel,v){
+              if(!v) return;
+              var el=d.querySelector('[name="Traveler '+i+' '+sel+'"]');
+              if(!el || String(el.value||'').trim()) return;   // never overwrite what they typed
+              el.value=v; n++;
+            }
+            put('Name', f.passport_full_name);
+            put('DOB', f.birthday);
+            put('Passport #', f.passport_number);
+            put('Passport Issue', f.passport_issue_date);
+            put('Passport Exp', f.passport_expiration_date);
+            put('Passport Country', f.passport_country);
+            if(f.gender){
+              var g=d.querySelector('[name="Traveler '+i+' Gender"]');
+              var letter=(f.gender.trim()[0]||'').toUpperCase();
+              if(g && !g.value && /^[FMX]$/.test(letter)){ g.value=letter; n++; }
+            }
+            if(n) say('Filled '+n+' box'+(n===1?'':'es')+'. '+(o.j.message||''),'good');
+            // Found something but filled nothing means every box already had an
+            // answer — that is a success, not the failure the red message implied.
+            else if(o.j.found) say('Everything here was already filled in, so nothing was changed. Check it against your passport before you submit.','good');
+            else  say(o.j.message || 'Nothing could be read from that photo — please type the details in by hand.','bad');
+          }).catch(function(){
+            btnT.textContent=label; btn.style.pointerEvents=''; input.value='';
+            say('Could not read that photo. Please type the details in by hand.','bad');
+          });
+        };
+        fr.onerror=function(){ btnT.textContent=label; btn.style.pointerEvents=''; say('Could not open that photo.','bad'); };
+        fr.readAsDataURL(file);
+      });
+    }
+    Array.prototype.forEach.call(document.querySelectorAll('.travgroup'),function(g){
+      var wrap=g.querySelector('.travwrap'), btn=g.querySelector('.addTrav');
+      var start=parseInt(wrap.getAttribute('data-n'),10)||1, count=0;
+      function add(){ count++; wrap.appendChild(travBlock(count)); }
+      for(var i=0;i<start;i++) add();
+      if(btn) btn.addEventListener('click', add);
+    });
+
+    var form=document.getElementById('pmtpForm');
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Sending…';
+      document.getElementById('pmtpErr').style.display='none';
+      var data=Object.fromEntries(new FormData(form).entries());
+      try{
+        var r=await fetch('https://pmtp.eliteparadiseplanners.com/api/form-notify',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+        var j=await r.json().catch(function(){return {}});
+        if(!r.ok||j.success===false) throw new Error('failed');
+        form.style.display='none';
+        document.getElementById('pmtpThanks').style.display='block';
+        window.scrollTo({top:0,behavior:'smooth'});
+      }catch(err){
+        document.getElementById('pmtpErr').style.display='block';
+        btn.disabled=false; btn.textContent='Submit';
+      }
+    });
+  })();
+</script>
+</body>
+</html>
