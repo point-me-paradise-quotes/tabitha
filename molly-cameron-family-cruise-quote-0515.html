@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!--PMTP_FRESH--><meta name="pmtp-build" content="mvrh536kanrwvw"><script>(function(){var V="mvrh536kanrwvw",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
+<!--PMTP_FRESH--><meta name="pmtp-build" content="mvuahx3i2i3ypc"><script>(function(){var V="mvuahx3i2i3ypc",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
 <meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
 <meta name="bingbot" content="noindex, nofollow, noarchive, noimageindex">
 <meta charset="utf-8">
@@ -10,7 +10,7 @@
 <title>Molly & Cameron Family Cruise</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Mulish:wght@400;600;700;800&display=swap">
 <style>
-/* Layout: teal sea-band header, then a single column of stateroom "berths" with a gold price rail, then totals + schedule tables */
+/* Layout: teal sea-band header, then a single column of stateroom "berths" with a gold price rail, totals, add-on packages, schedule tables */
 :root{
   --bg:#faf6ee; --paper:#ffffff; --ink:#1f3b3d; --muted:#5d7273;
   --teal:#2f7f7d; --teal-soft:#d7eeec; --gold:#b8913f; --gold-soft:#f4e8cc; --line:#e3ddd0;
@@ -56,6 +56,8 @@ section{display:grid;gap:18px}
 .room .tag{color:var(--teal);font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .room h3{font-size:25px}
 .cat{font-weight:700}
+.loc{display:flex;flex-wrap:wrap;gap:6px}
+.loc span{font-size:12.5px;font-weight:700;background:var(--teal-soft);color:var(--ink);border-radius:6px;padding:2px 9px}
 .room ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;color:var(--muted);font-size:14.5px}
 .room li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:9px;vertical-align:2px}
 .price{background:var(--teal-soft);border-left:3px solid var(--gold);padding:20px 22px;display:grid;align-content:center;gap:6px;min-width:210px}
@@ -63,16 +65,13 @@ section{display:grid;gap:18px}
 .price small{color:var(--muted);font-size:13px}
 .price .row{display:flex;justify-content:space-between;gap:12px;font-size:13.5px}
 .price .row span:last-child{font-weight:700}
-.dep{color:var(--ink)}
 .dep em{font-style:normal;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-left:4px}
 
-.total{background:var(--band);color:var(--band-ink);border-radius:14px;padding:26px 26px;display:grid;gap:16px}
+.total{background:var(--band);color:var(--band-ink);border-radius:14px;padding:26px;display:grid;gap:16px}
 .total .eyebrow{color:var(--gold)}
 .total .hero{font-family:var(--display);font-size:clamp(42px,8vw,58px);font-weight:700;line-height:1}
 .total .sub{opacity:.85;font-size:14px}
 .tline{display:flex;justify-content:space-between;gap:12px;padding-top:10px;border-top:1px solid rgba(255,255,255,.18);font-size:15px}
-.tline.grand{font-weight:800;font-size:17px}
-.tline.grand span:last-child{color:var(--gold)}
 
 .tbl{overflow-x:auto;background:var(--paper);border:1px solid var(--line);border-radius:12px}
 table{width:100%;border-collapse:collapse;font-size:14.5px}
@@ -80,7 +79,19 @@ th{text-align:left;font-size:12px;font-weight:800;letter-spacing:.1em;text-trans
 td{padding:12px 18px;border-bottom:1px solid var(--line);vertical-align:top}
 tr:last-child td{border-bottom:0}
 td.r,th.r{text-align:right;white-space:nowrap}
+td .d{display:block;color:var(--muted);font-size:13px;margin-top:2px}
 .pill{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--gold-soft);color:var(--ink);border:1px solid var(--gold);border-radius:99px;padding:1px 8px;margin-left:6px;vertical-align:1px}
+
+.pkgs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.pkg{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:grid;gap:12px;align-content:start;min-width:0}
+.pkg h3{font-size:24px}
+.pkg .lead{margin:0;color:var(--muted);font-size:14px}
+.pkg .fine{margin:0;font-size:13.5px;color:var(--muted)}
+.pkg .flag{margin:0;font-size:13.5px;background:var(--gold-soft);border-radius:8px;padding:10px 12px}
+.pkg table{font-size:14px}
+.pkg td{padding:10px 0}
+.pkg td.r{padding-left:12px}
+.disclaimer{margin:0;font-size:14px;font-style:italic;color:var(--muted);border-left:3px solid var(--gold);padding-left:12px}
 
 .notes{margin:0;padding:0;list-style:none;display:grid;gap:10px}
 .notes li{padding-left:18px;position:relative}
@@ -98,6 +109,7 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
   .room{grid-template-columns:1fr}
   .price{border-left:0;border-top:3px solid var(--gold);min-width:0}
   .alert{margin-top:-14px}
+  .pkgs{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -111,8 +123,8 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
     <div class="facts">
       <span><b>Sails</b> March 11–15, 2027</span>
       <span><b>4</b> nights</span>
-      <span><b>10</b> guests</span>
-      <span><b>4</b> staterooms</span>
+      <span><b>8</b> guests</span>
+      <span><b>3</b> staterooms</span>
     </div>
   </div>
 </header>
@@ -121,7 +133,7 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
   <div class="wrap">
     <div class="alert">
       <strong>Deposits due Sunday, Nov. 1, 2026</strong>
-      <span>$1,000 total to hold all four rooms (nonrefundable). Only 2 Sunset Balconies were left when quoted.</span>
+      <span>$800 total holds all three rooms (nonrefundable). Only 2 Sunset Balconies were left when quoted.</span>
     </div>
 
     <section>
@@ -135,7 +147,8 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
           <div class="info">
             <span class="tag">Room 1</span>
             <h3>Molly &amp; Cameron</h3>
-            <div class="cat">Sunset Ocean View Balcony (SB)</div>
+            <div class="cat">Sunset Ocean View Stateroom with Balcony</div>
+            <div class="loc"><span>Stateroom 9704</span><span>Deck 9</span></div>
             <ul>
               <li>2 guests</li>
               <li>Only 2 staterooms in this category were available when quoted</li>
@@ -143,64 +156,47 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
           </div>
           <div class="price">
             <div class="big num">$2,561.52</div>
-            <small>Cruise fare, taxes &amp; fees</small>
-            <div class="row num"><span>With gratuities</span><span>$2,709.52</span></div>
-            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$200</span></div>
+            <small>Cruise fare, including taxes</small>
+            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$200.00</span></div>
+            <div class="row num"><span>Final payment due</span><span>Dec. 26, 2026</span></div>
           </div>
         </article>
 
         <article class="room">
           <div class="info">
             <span class="tag">Room 2</span>
-            <h3>Older Daughters (17 &amp; 22)</h3>
+            <h3>Molly's Mom &amp; Two Littles</h3>
             <div class="cat">Interior Stateroom</div>
+            <div class="loc"><span>Stateroom 9673</span><span>Deck 9</span></div>
             <ul>
-              <li>2 guests</li>
-              <li>Same deck, two doors down from Molly &amp; Cameron</li>
-              <li>The 22-year-old meets Royal Caribbean's adult-in-room requirement</li>
+              <li>3 guests</li>
+              <li>Same deck as Molly &amp; Cameron</li>
             </ul>
           </div>
           <div class="price">
-            <div class="big num">$1,232.52</div>
-            <small>Cruise fare, taxes &amp; fees</small>
-            <div class="row num"><span>With gratuities</span><span>$1,380.52</span></div>
-            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$200</span></div>
+            <div class="big num">$1,541.28</div>
+            <small>Cruise fare, including taxes</small>
+            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$300.00</span></div>
+            <div class="row num"><span>Final payment due</span><span>Dec. 26, 2026</span></div>
           </div>
         </article>
 
         <article class="room">
           <div class="info">
             <span class="tag">Room 3</span>
-            <h3>Cameron's Mom &amp; Girls (13 &amp; 14)</h3>
-            <div class="cat">Interior Stateroom</div>
+            <h3>Cameron's Mom &amp; Two Daughters</h3>
+            <div class="cat">Ocean View Stateroom with Balcony</div>
+            <div class="loc"><span>Stateroom 8268</span><span>Deck 8</span></div>
             <ul>
               <li>3 guests</li>
-              <li>Same hallway as Molly &amp; Cameron, just a little further down</li>
+              <li>One deck below Molly &amp; Cameron</li>
             </ul>
           </div>
           <div class="price">
-            <div class="big num">$1,541.28</div>
-            <small>Cruise fare, taxes &amp; fees</small>
-            <div class="row num"><span>With gratuities</span><span>$1,763.28</span></div>
-            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$300</span></div>
-          </div>
-        </article>
-
-        <article class="room">
-          <div class="info">
-            <span class="tag">Room 4</span>
-            <h3>Molly's Mom &amp; Littles (9 &amp; 10)</h3>
-            <div class="cat">Interior Stateroom</div>
-            <ul>
-              <li>3 guests</li>
-              <li>Same hallway as Molly &amp; Cameron, just a little further down (not connecting)</li>
-            </ul>
-          </div>
-          <div class="price">
-            <div class="big num">$1,541.28</div>
-            <small>Cruise fare, taxes &amp; fees</small>
-            <div class="row num"><span>With gratuities</span><span>$1,763.28</span></div>
-            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$300</span></div>
+            <div class="big num">$2,355.28</div>
+            <small>Cruise fare, including taxes</small>
+            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$300.00</span></div>
+            <div class="row num"><span>Final payment due</span><span>Dec. 26, 2026</span></div>
           </div>
         </article>
       </div>
@@ -208,11 +204,12 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
 
     <section>
       <div class="total">
-        <span class="eyebrow">Family Cruise Total · All 10 Guests · 4 Staterooms</span>
-        <div class="hero num">$6,876.60</div>
-        <div class="sub">Cruise fares, taxes and fees, not including prepaid gratuities</div>
-        <div class="tline num"><span>Optional prepaid gratuities</span><span>$740.00</span></div>
-        <div class="tline grand num"><span>Grand total with gratuities</span><span>$7,616.60</span></div>
+        <span class="eyebrow">Family Cruise Total · All 8 Guests · 3 Staterooms</span>
+        <div class="hero num">$6,458.08</div>
+        <div class="sub">Cruise fares including taxes. Gratuities are not included.</div>
+        <div class="tline num"><span>Room 1 · Molly &amp; Cameron</span><span>$2,561.52</span></div>
+        <div class="tline num"><span>Room 2 · Molly's Mom &amp; Two Littles</span><span>$1,541.28</span></div>
+        <div class="tline num"><span>Room 3 · Cameron's Mom &amp; Two Daughters</span><span>$2,355.28</span></div>
       </div>
     </section>
 
@@ -225,12 +222,47 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
         <table>
           <thead><tr><th>Payment</th><th>Due date</th><th class="r">Amount</th></tr></thead>
           <tbody>
-            <tr><td>Combined deposits <span class="pill">Nonrefundable</span></td><td>Nov. 1, 2026</td><td class="r num">$1,000.00</td></tr>
-            <tr><td>Remaining cruise balance</td><td>Dec. 26, 2026</td><td class="r num">$5,876.60</td></tr>
-            <tr><td>Optional prepaid gratuities</td><td>If added</td><td class="r num">$740.00</td></tr>
+            <tr><td>Combined deposits <span class="pill">Nonrefundable</span></td><td>Nov. 1, 2026</td><td class="r num">$800.00</td></tr>
+            <tr><td>Remaining cruise balance</td><td>Dec. 26, 2026</td><td class="r num">$5,658.08</td></tr>
           </tbody>
         </table>
       </div>
+    </section>
+
+    <section>
+      <div class="sec-head">
+        <span class="eyebrow">Optional Add-Ons</span>
+        <h2>Drink &amp; internet packages</h2>
+        <p>Estimated prices for your 4-night cruise. These are optional and can be added after booking.</p>
+      </div>
+      <div class="pkgs">
+        <div class="pkg">
+          <h3>Drink packages</h3>
+          <table>
+            <tbody>
+              <tr><td><strong>Deluxe</strong><span class="d">Alcoholic and nonalcoholic drinks</span></td><td class="r num">$307–$448</td></tr>
+              <tr><td><strong>Refreshment</strong><span class="d">Nonalcoholic drinks</span></td><td class="r num">$118–$189</td></tr>
+              <tr><td><strong>Classic Soda</strong><span class="d">Fountain soda</span></td><td class="r num">$47–$76</td></tr>
+            </tbody>
+          </table>
+          <p class="fine">Per person. These estimates include the 18% gratuity and cover all 4 nights.</p>
+          <p class="flag">If one adult purchases the Deluxe package, other adults 21+ in the same stateroom are generally required to purchase it as well, unless an exception is approved.</p>
+        </div>
+        <div class="pkg">
+          <h3>Internet packages</h3>
+          <p class="lead">VOOM Surf + Stream Wi-Fi lets you browse, use social media, video chat and stream.</p>
+          <table>
+            <tbody>
+              <tr><td><strong>1 Device</strong><span class="d">$20–$30 per day</span></td><td class="r num">$80–$120</td></tr>
+              <tr><td><strong>2 Devices</strong><span class="d">$35–$50 per day</span></td><td class="r num">$140–$200</td></tr>
+              <tr><td><strong>4 Devices</strong><span class="d">$60–$85 per day</span></td><td class="r num">$240–$340</td></tr>
+            </tbody>
+          </table>
+          <p class="fine">Totals are estimates for the entire cruise.</p>
+          <p class="flag">Tip: You can buy one multiple-device package and share it with family members instead of buying separate packages for everyone.</p>
+        </div>
+      </div>
+      <p class="disclaimer">Actual pricing varies based on promotions and will be available in the Cruise Planner once booked.</p>
     </section>
 
     <section>
@@ -258,8 +290,8 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
       </div>
       <ul class="notes">
         <li>Molly &amp; Cameron's Sunset Balcony category had only 2 staterooms left when quoted.</li>
-        <li>The older daughters' room is on the same deck, two doors down. Both grandmother rooms are in the same hallway, a little further down.</li>
-        <li>Interior rooms are the quoted option for the grandmothers and younger kids. Ocean-view rooms would be on a different deck and priced separately.</li>
+        <li>Rooms 1 and 2 are both on Deck 9. Room 3 is a balcony stateroom on Deck 8.</li>
+        <li>Prices shown do not include gratuities.</li>
         <li>Room assignments for minors must follow Royal Caribbean's age and proximity requirements.</li>
         <li>Prices, promotions and availability can change until the reservations are secured with deposits.</li>
       </ul>
