@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<!--PMTP_FRESH--><meta name="pmtp-build" content="mvuahx3i2i3ypc"><script>(function(){var V="mvuahx3i2i3ypc",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
+<!--PMTP_FRESH--><meta name="pmtp-build" content="mvx15mu6yadcjf"><script>(function(){var V="mvx15mu6yadcjf",N="pmtp-"+"build",last=0;var RX=new RegExp("<meta name=\""+N+"\" content=\"([^\"]+)\"");function read(r){if(!r.ok)return"";if(!r.body||!r.body.getReader||!window.TextDecoder)return r.text();var rd=r.body.getReader(),dec=new TextDecoder(),buf="";function pump(){return rd.read().then(function(x){if(x.done)return buf;buf+=dec.decode(x.value,{stream:true});if(RX.test(buf)||buf.length>65536){try{rd.cancel()}catch(e){}return buf}return pump()})}return pump()}function go(v){var q=new URLSearchParams(location.search),t=q.get("pv")===v?(+q.get("pt")||1):0;if(t>=3)return;q.set("pv",v);q.set("pt",String(t+1));location.replace(location.pathname+"?"+q.toString()+location.hash)}function check(){var n=Date.now();if(n-last<60000||!window.fetch)return;last=n;fetch(location.pathname+"?pmtpcheck="+n,{cache:"no-store"}).then(read).then(function(t){var m=RX.exec(t||"");if(m&&m[1]!==V)go(m[1])}).catch(function(){})}if(document.readyState==="complete")setTimeout(check,1500);else addEventListener("load",function(){setTimeout(check,1500)});document.addEventListener("visibilitychange",function(){if(document.visibilityState==="visible")check()});})();</script><!--/PMTP_FRESH-->
 <meta name="googlebot" content="noindex, nofollow, noarchive, noimageindex">
 <meta name="bingbot" content="noindex, nofollow, noarchive, noimageindex">
 <meta charset="utf-8">
@@ -58,6 +58,12 @@ section{display:grid;gap:18px}
 .cat{font-weight:700}
 .loc{display:flex;flex-wrap:wrap;gap:6px}
 .loc span{font-size:12.5px;font-weight:700;background:var(--teal-soft);color:var(--ink);border-radius:6px;padding:2px 9px}
+.guests{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:14.5px;font-weight:600}
+.subs{display:grid;gap:10px;margin-top:4px}
+.sub{border-top:1px solid var(--line);padding-top:10px;display:grid;gap:6px}
+.sub .sub-h{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 12px;align-items:baseline}
+.sub .sub-h b{font-weight:800}
+.sub .sub-h span{font-weight:800;font-variant-numeric:tabular-nums}
 .room ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;color:var(--muted);font-size:14.5px}
 .room li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-right:9px;vertical-align:2px}
 .price{background:var(--teal-soft);border-left:3px solid var(--gold);padding:20px 22px;display:grid;align-content:center;gap:6px;min-width:210px}
@@ -123,8 +129,9 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
     <div class="facts">
       <span><b>Sails</b> March 11–15, 2027</span>
       <span><b>4</b> nights</span>
+      <span><b>From</b> Galveston, Texas</span>
       <span><b>8</b> guests</span>
-      <span><b>3</b> staterooms</span>
+      <span><b>4</b> staterooms</span>
     </div>
   </div>
 </header>
@@ -133,7 +140,7 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
   <div class="wrap">
     <div class="alert">
       <strong>Deposits due Sunday, Nov. 1, 2026</strong>
-      <span>$800 total holds all three rooms (nonrefundable). Only 2 Sunset Balconies were left when quoted.</span>
+      <span>$800 total holds all four rooms (nonrefundable). Only 2 Sunset Balconies were left when quoted.</span>
     </div>
 
     <section>
@@ -147,10 +154,10 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
           <div class="info">
             <span class="tag">Room 1</span>
             <h3>Molly &amp; Cameron</h3>
-            <div class="cat">Sunset Ocean View Stateroom with Balcony</div>
+            <div class="cat">Sunset Ocean View Stateroom with Balcony (Aft)</div>
             <div class="loc"><span>Stateroom 9704</span><span>Deck 9</span></div>
+            <div class="guests"><span>Cameron Richard Torkay</span><span>Molly Ann Farah</span></div>
             <ul>
-              <li>2 guests</li>
               <li>Only 2 staterooms in this category were available when quoted</li>
             </ul>
           </div>
@@ -168,8 +175,8 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
             <h3>Molly's Mom &amp; Two Littles</h3>
             <div class="cat">Interior Stateroom</div>
             <div class="loc"><span>Stateroom 9673</span><span>Deck 9</span></div>
+            <div class="guests"><span>Ann Marie Carter</span><span>Juliet Barbara Farah</span><span>William George Farah III</span></div>
             <ul>
-              <li>3 guests</li>
               <li>Same deck as Molly &amp; Cameron</li>
             </ul>
           </div>
@@ -183,19 +190,29 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
 
         <article class="room">
           <div class="info">
-            <span class="tag">Room 3</span>
-            <h3>Cameron's Mom &amp; Two Daughters</h3>
-            <div class="cat">Ocean View Stateroom with Balcony</div>
-            <div class="loc"><span>Stateroom 8268</span><span>Deck 8</span></div>
+            <span class="tag">Rooms 3 &amp; 4</span>
+            <h3>Pamela &amp; Girls</h3>
+            <div class="cat">Connecting Interior Staterooms</div>
+            <div class="loc"><span>Staterooms 9361 &amp; 9363</span><span>Deck 9</span></div>
+            <div class="subs">
+              <div class="sub">
+                <div class="sub-h"><b>Room 3 · Stateroom 9361</b><span>$1,232.52</span></div>
+                <div class="guests"><span>Charlotte Florence Torkay</span><span>Elizabeth Grace Torkay</span></div>
+              </div>
+              <div class="sub">
+                <div class="sub-h"><b>Room 4 · Stateroom 9363</b><span>$1,118.76</span></div>
+                <div class="guests"><span>Pamela Sempreviva-Torkay</span></div>
+              </div>
+            </div>
             <ul>
-              <li>3 guests</li>
-              <li>One deck below Molly &amp; Cameron</li>
+              <li>The girls have their own room with a connecting door to Pamela's</li>
+              <li>Same deck as Molly &amp; Cameron</li>
             </ul>
           </div>
           <div class="price">
-            <div class="big num">$2,355.28</div>
-            <small>Cruise fare, including taxes</small>
-            <div class="row num dep"><span>Deposit<em>Nonrefundable</em></span><span>$300.00</span></div>
+            <div class="big num">$2,351.28</div>
+            <small>Combined cruise fare, including taxes</small>
+            <div class="row num dep"><span>Combined deposit<em>Nonrefundable</em></span><span>$300.00</span></div>
             <div class="row num"><span>Final payment due</span><span>Dec. 26, 2026</span></div>
           </div>
         </article>
@@ -204,12 +221,13 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
 
     <section>
       <div class="total">
-        <span class="eyebrow">Family Cruise Total · All 8 Guests · 3 Staterooms</span>
-        <div class="hero num">$6,458.08</div>
-        <div class="sub">Cruise fares including taxes. Gratuities are not included.</div>
-        <div class="tline num"><span>Room 1 · Molly &amp; Cameron</span><span>$2,561.52</span></div>
-        <div class="tline num"><span>Room 2 · Molly's Mom &amp; Two Littles</span><span>$1,541.28</span></div>
-        <div class="tline num"><span>Room 3 · Cameron's Mom &amp; Two Daughters</span><span>$2,355.28</span></div>
+        <span class="eyebrow">Family Cruise Total · All 8 Guests · 4 Staterooms</span>
+        <div class="hero num">$6,454.08</div>
+        <div class="sub">Cruise fares, taxes and fees. Gratuities are not included.</div>
+        <div class="tline num"><span>9704 · Molly &amp; Cameron (Sunset Balcony)</span><span>$2,561.52</span></div>
+        <div class="tline num"><span>9673 · Ann Marie &amp; Littles (Interior)</span><span>$1,541.28</span></div>
+        <div class="tline num"><span>9361 · Charlotte &amp; Elizabeth (Connecting Interior)</span><span>$1,232.52</span></div>
+        <div class="tline num"><span>9363 · Pamela (Connecting Interior)</span><span>$1,118.76</span></div>
       </div>
     </section>
 
@@ -223,7 +241,7 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
           <thead><tr><th>Payment</th><th>Due date</th><th class="r">Amount</th></tr></thead>
           <tbody>
             <tr><td>Combined deposits <span class="pill">Nonrefundable</span></td><td>Nov. 1, 2026</td><td class="r num">$800.00</td></tr>
-            <tr><td>Remaining cruise balance</td><td>Dec. 26, 2026</td><td class="r num">$5,658.08</td></tr>
+            <tr><td>Remaining cruise balance</td><td>Dec. 26, 2026</td><td class="r num">$5,654.08</td></tr>
           </tbody>
         </table>
       </div>
@@ -290,8 +308,9 @@ footer .wrap{padding-block:28px 36px;display:flex;flex-wrap:wrap;justify-content
       </div>
       <ul class="notes">
         <li>Molly &amp; Cameron's Sunset Balcony category had only 2 staterooms left when quoted.</li>
-        <li>Rooms 1 and 2 are both on Deck 9. Room 3 is a balcony stateroom on Deck 8.</li>
-        <li>Prices shown do not include gratuities.</li>
+        <li>All four staterooms are on Deck 9.</li>
+        <li>Rooms 3 and 4 connect: Charlotte and Elizabeth are in 9361, and Pamela is next door in 9363. Connecting staterooms are subject to availability.</li>
+        <li>All pricing includes cruise fare, taxes and fees. Gratuities are not included.</li>
         <li>Room assignments for minors must follow Royal Caribbean's age and proximity requirements.</li>
         <li>Prices, promotions and availability can change until the reservations are secured with deposits.</li>
       </ul>
